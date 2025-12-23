@@ -107,17 +107,36 @@
       var(--glass-highlight),
       inset 0 0 40px hsla(225, 60%, 30%, 0.1);
     transition: all var(--timing-medium) var(--easing-smooth);
+    position: relative;
+    overflow: hidden;
   }
-  
+
+  .glass-card::after {
+    content: '';
+    position: absolute;
+    inset: -100%;
+    pointer-events: none;
+
+    background: linear-gradient(
+      45deg,
+      transparent 45%,
+      rgba(255,255,255,0.05) 50%,
+      transparent 55%
+    );
+
+    animation: waveShine 10s linear infinite;
+  }
+
+
   .glass-card:hover {
     border-color: hsla(43, 60%, 52%, 0.3);
-    box-shadow: 
+    box-shadow:
       var(--glass-shadow),
       var(--glass-highlight),
       inset 0 0 40px hsla(225, 60%, 30%, 0.1),
       0 0 30px hsla(43, 60%, 52%, 0.1);
   }
-  
+
   /* Glass Navbar */
   .glass-nav {
     background: linear-gradient(180deg, hsla(225, 60%, 20%, 0.8) 0%, hsla(225, 60%, 15%, 0.6) 100%);
@@ -125,7 +144,7 @@
     -webkit-backdrop-filter: blur(24px);
     border-bottom: 1px solid hsla(225, 40%, 50%, 0.1);
   }
-  
+
   /* Premium Button Styles */
   .btn-gold {
     background: var(--gradient-gold);
@@ -133,13 +152,13 @@
     font-weight: 500;
     letter-spacing: 0.05em;
     transition: all var(--timing-medium) var(--easing-smooth);
-    box-shadow: 
+    box-shadow:
       0 4px 20px hsla(43, 60%, 52%, 0.3),
       inset 0 1px 0 hsla(0, 0%, 100%, 0.2);
     position: relative;
     overflow: hidden;
   }
-  
+
   .btn-gold::before {
     content: '';
     position: absolute;
@@ -150,18 +169,18 @@
     background: linear-gradient(90deg, transparent, hsla(0, 0%, 100%, 0.2), transparent);
     transition: left var(--timing-slow) var(--easing-smooth);
   }
-  
+
   .btn-gold:hover::before {
     left: 100%;
   }
-  
+
   .btn-gold:hover {
     transform: translateY(-2px);
-    box-shadow: 
+    box-shadow:
       0 8px 30px hsla(43, 60%, 52%, 0.4),
       inset 0 1px 0 hsla(0, 0%, 100%, 0.3);
   }
-  
+
   .btn-glass {
     background: hsla(225, 60%, 30%, 0.3);
     backdrop-filter: blur(10px);
@@ -169,25 +188,25 @@
     color: hsl(var(--foreground));
     transition: all var(--timing-medium) var(--easing-smooth);
   }
-  
+
   .btn-glass:hover {
     background: hsla(225, 60%, 35%, 0.4);
     border-color: hsla(43, 60%, 52%, 0.3);
     transform: translateY(-2px);
   }
-  
+
   /* Gold Divider */
   .gold-divider {
     height: 1px;
     background: var(--gradient-gold-subtle);
     opacity: 0.5;
   }
-  
+
   /* Section flowing transitions */
   .section-flow {
     position: relative;
   }
-  
+
   .section-flow::before {
     content: '';
     position: absolute;
@@ -198,7 +217,7 @@
     background: linear-gradient(180deg, hsla(223, 88%, 10%, 0.8) 0%, transparent 100%);
     pointer-events: none;
   }
-  
+
   /* Text gradient gold */
   .text-gold-gradient {
     background: var(--gradient-gold);
@@ -206,24 +225,24 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
-  
+
   /* Subtle water texture overlay */
   .water-texture {
     position: relative;
   }
-  
+
   .water-texture::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: 
+    background:
       radial-gradient(ellipse at 20% 30%, hsla(225, 60%, 40%, 0.1) 0%, transparent 50%),
       radial-gradient(ellipse at 80% 70%, hsla(225, 60%, 35%, 0.08) 0%, transparent 50%),
       radial-gradient(ellipse at 50% 50%, hsla(225, 60%, 30%, 0.05) 0%, transparent 70%);
     pointer-events: none;
     animation: water-shimmer 15s ease-in-out infinite;
   }
-  
+
   /* Animations */
   @keyframes water-shimmer {
     0%, 100% {
@@ -235,7 +254,7 @@
       transform: translateY(-10px);
     }
   }
-  
+
   @keyframes fade-in-up {
     from {
       opacity: 0;
@@ -246,29 +265,34 @@
       transform: translateY(0);
     }
   }
-  
+
   @keyframes fade-in {
     from { opacity: 0; }
     to { opacity: 1; }
   }
-  
+
   @keyframes shimmer {
     0% { background-position: -200% center; }
     100% { background-position: 200% center; }
   }
-  
+
   @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
   }
-  
+
   @keyframes glow-pulse {
-    0%, 100% { 
+    0%, 100% {
       box-shadow: 0 0 20px hsla(43, 60%, 52%, 0.2);
     }
-    50% { 
+    50% {
       box-shadow: 0 0 40px hsla(43, 60%, 52%, 0.4);
     }
+  }
+
+  @keyframes waveShine {
+    from { transform: translate(-20%, -20%); }
+    to   { transform: translate(20%, 20%); }
   }
   
   .animate-fade-in-up {
