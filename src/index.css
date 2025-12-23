@@ -7,10 +7,9 @@
 @layer base {
   :root {
       /* Ocean Deep Color Palette */
-    --background: #181e68;
-    --background-deep: #092e74;
-    --background-abyss: #051c50;
-    
+    --background: 230 60% 12%;
+    --bg-solid: #181e68;
+
     --foreground: 0 0% 100%;
     --foreground-muted: 220 20% 80%;
     
@@ -48,9 +47,6 @@
     --radius: 1rem;
     
     /* Custom gradients */
-    --gradient-ocean: linear-gradient(180deg, var(--background) 0%,
-                                                  var(--background-deep) 50%,
-                                                  var(--background-abyss) 100%);
     --gradient-glass: linear-gradient(135deg, hsla(225, 60%, 35%, 0.3) 0%, hsla(225, 60%, 20%, 0.1) 100%);
     --gradient-gold: linear-gradient(135deg, hsl(43, 60%, 52%) 0%, hsl(43, 70%, 60%) 50%, hsl(43, 50%, 45%) 100%);
     --gradient-gold-subtle: linear-gradient(90deg, transparent 0%, hsl(43, 60%, 52%) 50%, transparent 100%);
@@ -86,7 +82,7 @@
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'Inter', sans-serif;
-    background: var(--gradient-ocean);
+    background: var(--bg-solid);
     min-height: 100vh;
   }
   
@@ -328,7 +324,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: hsl(223, 88%, 10%);
+  background: var(--bg-solid);
 }
 
 ::-webkit-scrollbar-thumb {
