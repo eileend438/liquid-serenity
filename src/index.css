@@ -107,7 +107,26 @@
       var(--glass-highlight),
       inset 0 0 40px hsla(225, 60%, 30%, 0.1);
     transition: all var(--timing-medium) var(--easing-smooth);
+    position: relative;
+    overflow: hidden;
   }
+
+  .glass-card::after {
+    content: '';
+    position: absolute;
+    inset: -100%;
+    pointer-events: none;
+
+    background: linear-gradient(
+      45deg,
+      transparent 45%,
+      rgba(255,255,255,0.05) 50%,
+      transparent 55%
+    );
+
+    animation: waveShine 10s linear infinite;
+  }
+
   
   .glass-card:hover {
     border-color: hsla(43, 60%, 52%, 0.3);
@@ -269,6 +288,11 @@
     50% { 
       box-shadow: 0 0 40px hsla(43, 60%, 52%, 0.4);
     }
+  }
+
+  @keyframes waveShine {
+    from { transform: translate(-20%, -20%); }
+    to   { transform: translate(20%, 20%); }
   }
   
   .animate-fade-in-up {
