@@ -37,24 +37,26 @@ const Hero = () => {
           {/* Content */}
           <div className="flex-1 text-center lg:text-left max-w-2xl">
             <h1 
-              className="font-serif text-display-lg md:text-display-xl text-foreground mb-4 opacity-0 animate-fade-in-up"
+              className="font-serif text-2xl md:text-4xl text-foreground mb-4 opacity-0 animate-fade-in-up"
               style={{ animationDelay: '0.3s' }}
             >
-              Сабрина Салихова
+              САБРИНА САЛИХОВА
             </h1>
             
             <p 
-              className="text-lg md:text-xl text-primary font-serif tracking-wide mb-6 opacity-0 animate-fade-in-up"
+              className="text-base md:text-xl text-primary font-serif tracking-wide mb-6 opacity-0 animate-fade-in-up"
               style={{ animationDelay: '0.4s' }}
             >
-              Стратег-визионер • бизнес-коуч • мета-психолог • серийный предприниматель
+              СТРАТЕГ-ВИЗИОНЕР • БИЗНЕС-КОУЧ • МАРКЕТОЛОГ • ИССЛЕДОВАТЕЛЬ • СЕРИЙНЫЙ ПРЕДПРИНИМАТЕЛЬ
             </p>
             
             <p 
               className="text-foreground-muted text-lg leading-relaxed mb-10 opacity-0 animate-fade-in-up"
               style={{ animationDelay: '0.5s' }}
             >
-              Помогаю предпринимателям находить уникальность и превращать её в внеконкурентный продукт и стратегию на годы.
+              Помогаю создать внеконкурентные уникальные продукты и проекты
+              <br />
+              на фундаменте большой бизнес-идеи со стратегией на годы.
             </p>
 
             {/* CTAs */}

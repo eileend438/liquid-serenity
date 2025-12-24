@@ -60,7 +60,7 @@ const ExpertiseSection = () => {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          Экспертиза
+          Экспертное преимущество
         </h2>
 
         {/* Expertise Grid */}
@@ -104,7 +104,8 @@ const ExpertiseSection = () => {
         >
           <div className="gold-divider mb-8 max-w-xl mx-auto" />
           <p className="font-serif text-xl md:text-2xl text-foreground italic">
-            "Снаружи — скорость и время опережения. Внутри — спокойная сила и опора."
+            Сильнее всех - сила в уверенном спокойствии.
+             Быстрее всех - сила в скорости и времени опережения
           </p>
         </div>
       </div>
