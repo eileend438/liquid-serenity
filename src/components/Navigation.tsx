@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Music, Menu, X } from 'lucide-react';
+import { Music, Pause, Menu, X } from 'lucide-react';
 
 const navItems = [
   { label: 'Кто я', href: '/#about' },
@@ -185,7 +185,11 @@ useEffect(() => {
           >
             {/* desktop text */}
             <span className="hidden lg:inline">Войти в атмосферу</span>
-            <Music className="h-5 w-5" />
+            {isPlaying ? (
+                <Pause className="h-5 w-5 animate-pulse" />
+              ) : (
+                <Music className="h-5 w-5" />
+              )}
           </button>
 
           {/* Mobile Menu Button */}
