@@ -95,7 +95,8 @@ const ArticlePage = () => {
         <article className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
             {/* Back link */}
-            <Link
+            <div className="mb-12">
+                <Link
               to="/articles"
               className="inline-flex items-center gap-2 text-foreground-muted hover:text-foreground transition-colors mb-10"
             >
@@ -103,15 +104,12 @@ const ArticlePage = () => {
               Все статьи
             </Link>
 
-            {/* Category */}
-            <span className="inline-block text-sm font-medium uppercase tracking-wider text-primary mb-4">
-              {article.category}
-            </span>
 
             {/* Title */}
-            <h1 className="font-serif text-display text-foreground mb-10">
+            <h1 className="font-serif text-display text-foreground mt-8 leading-tight">
               {article.title}
             </h1>
+            </div>
 
             <div className="gold-divider mb-10" />
 
@@ -124,20 +122,7 @@ const ArticlePage = () => {
               ))}
             </div>
 
-            {/* CTA */}
-            <div className="mt-16 glass-card rounded-2xl p-8 text-center">
-              <p className="font-serif text-xl text-foreground mb-6">
-                Хотите обсудить вашу ситуацию?
-              </p>
-              <a
-                href="https://t.me/Sabrina_Salihova"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block btn-gold px-8 py-4 rounded-xl font-sans text-sm uppercase tracking-wider"
-              >
-                Написать в Telegram
-              </a>
-            </div>
+
           </div>
         </article>
       </main>

@@ -3,7 +3,7 @@ import sabrinaPhoto from '@/assets/sabrina-photo.jpg';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden water-texture">
+    <section className="relative min-h-screen pb-28 flex items-center justify-center overflow-hidden water-texture">
       {/* Background gradient layers */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background-deep to-background-abyss" />
       
@@ -56,7 +56,7 @@ const Hero = () => {
             >
               Помогаю создать внеконкурентные уникальные продукты и проекты
               <br />
-              на фундаменте большой бизнес-идеи и миссии со стратегией на годы.
+              на фундаменте большой бизнес-идеи со стратегией на годы.
             </p>
 
             {/* CTAs */}
@@ -83,20 +83,30 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 opacity-0 animate-fade-in" style={{ animationDelay: '1s' }}>
+      <div
+        className="
+          absolute left-1/2 -translate-x-1/2
+          bottom-6 md:bottom-8 lg:bottom-10
+          z-20
+          opacity-0 animate-fade-in
+        "
+        style={{ animationDelay: "1s" }}
+      >
         <a
           href="#about"
           onClick={(e) => {
             e.preventDefault();
-            document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+            document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
           }}
           className="flex flex-col items-center text-foreground-muted hover:text-primary transition-colors duration-medium"
         >
-          <span className="text-xs uppercase tracking-widest mb-2 font-sans">Узнать больше</span>
+          <span className="text-xs uppercase tracking-widest mb-2 font-sans">
+            Узнать больше
+          </span>
           <ArrowDown size={20} className="animate-float" />
         </a>
       </div>
+
     </section>
   );
 };

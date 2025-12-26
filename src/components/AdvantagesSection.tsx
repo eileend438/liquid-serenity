@@ -22,7 +22,7 @@ const advantages = [
     text:
     (
        <>
-           <strong className="font-black text-gold-gradient">Я женщина</strong>, и в этом моя сила как проводника в мир души гармоничных состояний. Эти состояния во многом недоступны мужчинам, потому что по своей природе они чаще действуют из логики и ума. А уникальность и пассионарность рождаются не из логики. Они воссоздаются через другие потенциалы, в которых я являюсь сильным проводником.
+           <strong className="font-black text-gold-gradient">Я женщина</strong>, и в этом моя сила как проводника в мир души гармоничных состояний. Эти состояния во многом недоступны мужчинам, потому что по своей природе они чаще действуют из логики и ума. А уникальность и пассионарность рождаются не из логики. Они воссоздаются через другие потенциалы, в которые я являюсь сильным проводником.
         </>
       ),
   },
@@ -33,13 +33,13 @@ const advantages = [
                  <strong className="font-black text-gold-gradient">Я единственная, кто занимается комплексной конкурентоспособностью:</strong>
               </>
              ),
-                  list: [
-                    'идеологической (смыслы и мировоззрение)',
-                    'смысловой (зачем и ради чего существует продукт)',
-                    'маркетинговой (позиционирование и привлечение клиентов)',
-                    'финансовой (деньги, модель прибыли, устойчивость)',
-                    'продуктовой (что именно вы создаёте и почему это выбирают)',
-                    'стратегической (долгосрочное развитие и преимущество на рынке - сильное наследие)',
+                  items: [
+                    { title: 'Идеологическая', desc: 'Смыслы и мировоззрение' },
+                    { title: 'Смысловая', desc: 'Зачем и ради чего существует продукт' },
+                    { title: 'Маркетинговая', desc: 'Позиционирование и привлечение клиентов' },
+                    { title: 'Финансовая', desc: 'Деньги, модель прибыли, устойчивость' },
+                    { title: 'Продуктовая', desc: 'Что именно вы создаёте и почему это выбирают' },
+                    { title: 'Стратегическая', desc: 'Долгосрочное развитие и преимущество на рынке — сильное наследие' },
                   ],
 
              },
@@ -66,15 +66,16 @@ const AdvantagesSection = () => {
     return () => observer.disconnect();
   }, []);
 
+
   return (
-    <section ref={sectionRef} className="py-32 relative">
+    <section id="advantages" ref={sectionRef} className="py-32 relative">
       <div className="container mx-auto px-6">
-        <h2 
+        <h2
           className={`font-serif text-display text-center text-foreground mb-16 transition-all duration-slow ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          Мои преимущества
+          Экспертное преимущество
         </h2>
 
         <div className="max-w-4xl mx-auto space-y-6">
@@ -86,8 +87,8 @@ const AdvantagesSection = () => {
               }`}
               style={{ transitionDelay: `${100 + index * 150}ms` }}
             >
-              <div className="flex gap-6">
-                <span className="font-serif text-3xl md:text-4xl text-primary flex-shrink-0">
+              <div className="flex flex-col sm:flex-row gap-6">
+                <span className="font-serif text-3xl md:text-4xl text-primary flex-shrink-0 sm:self-auto self-center">
                   {advantage.number}
                 </span>
                 <div className="flex-1">
@@ -95,13 +96,24 @@ const AdvantagesSection = () => {
                       {advantage.text}
                     </p>
 
-                    {advantage.list && (
-                      <ul className="mt-4 space-y-2 pl-4 list-disc text-foreground-muted">
-                        {advantage.list.map((item, i) => (
-                          <li key={i}>{item}</li>
+                    {advantage.items && (
+                      <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center">
+                        {advantage.items.map((it) => (
+                          <div key={it.title} className="glass-card rounded-xl p-5 w-full max-w-xs">
+                            <div className="font-black text-gold-gradient">{it.title}</div>
+
+                            <div className="gold-divider my-3" />
+
+                            <div className="text-foreground-muted text-sm leading-relaxed">
+                              {it.desc}
+                            </div>
+                          </div>
                         ))}
-                      </ul>
+                      </div>
                     )}
+
+
+
                 </div>
               </div>
               

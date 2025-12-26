@@ -36,21 +36,22 @@ const AboutSection = () => {
             Кто я
           </h2>
 
-          <div 
-            className={`glass-card rounded-2xl p-8 md:p-12 transition-all duration-slow delay-200 ${
+          <div
+            data-gold-flash
+            className={`glass-card gold-scroll-flash rounded-2xl p-8 md:p-12 transition-all duration-slow delay-200 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
             <div className="space-y-6 text-foreground-muted leading-relaxed text-lg">
               <p>
-              Я бизнес-коуч, стратег-визионер, серийный предприниматель более 15 лет (с успешным опытом построения <strong className="font-black text-gold-gradient">голубых океанов и уникальных проектов</strong>), мета-психолог, маркетолог, исследователь, антикризисный управленец.
+              Я бизнес-коуч, стратег-визионер, серийный предприниматель более 15 лет (с опытом построения <strong className="font-black text-gold-gradient">голубых океанов и уникальных проектов</strong>), мета-психолог, маркетолог, исследователь, антикризисный управленец.
               </p>
               
               <p>
               Помогаю создать
-                  <strong className="font-black text-gold-gradient"> ВНЕKОНКУРЕНТНЫЙ, ПРИБЫЛЬНЫЙ И УНИКАЛЬНЫЙ ПРОДУКТ С FUCKING WOW!
+                  <strong className="font-black text-gold-gradient"> ВНЕKОНКУРЕНТНЫЙ, ПРИБЫЛЬНЫЙ И УНИКАЛЬНЫЙ ПРОДУКТ С FUCKING WOW! эффектом,
                    </strong> {' '}
-                   эффектом, на фундаменте МИССИИ, ВИДЕНИЯ и БОЛЬШОЙ БИЗНЕС-ИДЕИ (BIG IDEA), {' '}
+                   на фундаменте МИССИИ, ВИДЕНИЯ и БОЛЬШОЙ БИЗНЕС-ИДЕИ (BIG IDEA), {' '}
                    6&#8209;ГО&nbsp;ТЕХНОЛОГИЧЕСКОГО УКЛАДА И КЛИЕНТОЦЕНТРИЧНОЙ бизнес-модели.
               </p>
 

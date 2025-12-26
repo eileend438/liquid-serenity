@@ -85,10 +85,7 @@ const Articles = () => {
                 }`}
                 style={{ transitionDelay: `${150 + index * 80}ms` }}
               >
-                {/* Category badge */}
-                <span className="inline-block text-xs font-medium uppercase tracking-wider text-primary mb-4">
-                  {article.category}
-                </span>
+
 
                 <h2 className="font-serif text-xl text-foreground mb-4 leading-tight">
                   {article.title}

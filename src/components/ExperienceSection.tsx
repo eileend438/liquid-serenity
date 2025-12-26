@@ -1,107 +1,62 @@
-import { useEffect, useRef, useState } from 'react';
-import { Target, Compass, Rocket } from 'lucide-react';
-
-const workFormats = [
-  {
-    icon: Target,
-    title: 'Диагностика уникальности и опоры',
-  },
-  {
-    icon: Compass,
-    title: 'Сборка Big Idea и стратегии на несколько лет',
-  },
-  {
-    icon: Rocket,
-    title: 'Упаковка и вывод на рынок по правилам 2026',
-  },
-];
+import { Link } from "react-router-dom";
 
 const ExperienceSection = () => {
-  const sectionRef = useRef<HTMLElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.2 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <section id="experience" ref={sectionRef} className="py-32 relative">
+    <section id="experience" className="py-32 relative">
       <div className="container mx-auto px-6">
-        <h2 
-          className={`font-serif text-display text-center text-foreground mb-16 transition-all duration-slow ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}
-        >
-          Опыт и исследование
+        <h2 className="font-serif text-display text-center text-foreground mb-6">
+          Опыт
         </h2>
 
-        <div className="max-w-4xl mx-auto space-y-8">
-          {/* Main text blocks */}
-          <div 
-            className={`glass-card rounded-2xl p-8 md:p-10 transition-all duration-slow delay-100 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}
-          >
-            <p className="text-foreground-muted text-lg leading-relaxed">
-              Я исследовала тему уникальности и пассионарности личности более 10 лет, а также их прямую связь 
-              с экономическими процессами и развитием России, параллельно получая дополнительное образование
-              в этой сфере.
-            </p>
-          </div>
-
-          <div 
-            className={`glass-card rounded-2xl p-8 md:p-10 transition-all duration-slow delay-200 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}
-          >
-            <p className="text-foreground-muted text-lg leading-relaxed">
-              Более 15 лет строю уникальные проекты и голубые океаны: от идеи — до результата и устойчивой позиции.
-            </p>
-          </div>
-
-          {/* Work format */}
-          <div 
-            className={`mt-16 transition-all duration-slow delay-300 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}
-          >
-            <h3 className="font-serif text-heading text-center text-foreground mb-10">
-              Формат работы
-            </h3>
-
-            <div className="grid md:grid-cols-3 gap-6">
-              {workFormats.map((format, index) => (
+      <div className="grid gap-10 md:grid-cols-2 items-stretch">
+                {/* Left: text */}
                 <div
-                  key={format.title}
-                  className={`glass-card rounded-xl p-6 text-center transition-all duration-slow ${
-                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                  }`}
-                  style={{ transitionDelay: `${400 + index * 100}ms` }}
-                >
-                  <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                    <format.icon className="w-6 h-6 text-primary" />
+                data-gold-flash
+                className="glass-card gold-scroll-flash rounded-2xl p-8 md:p-10">
+                  <div className="text-foreground-muted text-lg leading-relaxed space-y-6">
+                    <p>
+                      Мой опыт — это не консультирование и не работа «по шаблонам».
+                      Это реальное создание, развитие и продажа уникальных бизнесов в
+                      высококонкурентных нишах.
+                    </p>
+
+                    <p>
+                      Я заходила в рынки первой, формировала новые категории,
+                      выстраивала продукт, сервис и стратегию — и выходила из проектов
+                      на пике, когда они становились массовыми.
+                    </p>
+
+                    <p>
+                      За 15+ лет я создала и масштабировала проекты в food-индустрии,
+                      сервисе, гостеприимстве, fashion и креативной экономике.
+                      Во всех случаях ключом были не бюджеты, а вкус, чувствительность
+                      к рынку и умение видеть пустоты.
+                    </p>
+
+                    <p>
+                      Эти проекты — не про удачу и не про «оказаться в нужное время».
+                      Это про навык создавать уникальные форматы, которые рынок
+                      сначала не видит — а потом начинает копировать.
+                    </p>
                   </div>
-                  <p className="text-foreground-muted text-sm leading-relaxed">
-                    {format.title}
-                  </p>
+
+                  <div className="mt-10 text-center">
+                                <Link
+                                  to="/projects"
+                                  className="btn-gold px-8 py-4 rounded-xl font-sans text-sm uppercase tracking-wider text-center inline-flex"
+                                >
+                                  Подробнее о проектах
+                                </Link>
+                  </div>
                 </div>
-              ))}
-            </div>
-          </div>
-        </div>
+
+              {/* Right: photo placeholder */}
+                <div className="glass-card rounded-2xl p-8 md:p-10">
+                  <div className="h-full rounded-2xl border border-white/10 bg-white/5 flex items-center justify-center text-foreground-muted text-sm">
+                            тут будет фото
+                  </div>
+                </div>
+              </div>
       </div>
     </section>
   );

@@ -1,14 +1,41 @@
+import { useEffect } from "react";
+
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import AboutSection from '@/components/AboutSection';
 import ExperienceSection from '@/components/ExperienceSection';
-import ExpertiseSection from '@/components/ExpertiseSection';
 import AdvantagesSection from '@/components/AdvantagesSection';
-import ProjectsSection from '@/components/ProjectsSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 
 const Index = () => {
+
+    useEffect(() => {
+        if (window.location.hash) return;
+
+            // запретить автоворстанавление
+            if ("scrollRestoration" in window.history) {
+              window.history.scrollRestoration = "manual";
+            }
+
+            const forceTop = () => window.scrollTo(0, 0);
+
+            // сразу
+            forceTop();
+            // после показа страницы (Chrome reload/back-forward)
+            const onPageShow = () => {
+              forceTop();
+              requestAnimationFrame(forceTop);
+              setTimeout(forceTop, 50);
+            };
+
+            window.addEventListener("pageshow", onPageShow);
+
+            return () => {
+              window.removeEventListener("pageshow", onPageShow);
+            };
+          }, []);
+
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -16,9 +43,7 @@ const Index = () => {
         <Hero />
         <AboutSection />
         <ExperienceSection />
-        <ExpertiseSection />
         <AdvantagesSection />
-        <ProjectsSection />
         <ContactSection />
       </main>
       <Footer />

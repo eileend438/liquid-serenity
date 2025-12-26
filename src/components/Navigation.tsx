@@ -5,8 +5,8 @@ import { Music, Pause, Menu, X } from 'lucide-react';
 const navItems = [
   { label: 'Кто я', href: '/#about' },
   { label: 'Опыт', href: '/#experience' },
-  { label: 'Экспертное преимущество', href: '/#expertise' },
-  { label: 'Проекты', href: '/#projects' },
+  { label: 'Экспертное преимущество', href: '/#advantages' },
+  { label: 'Проекты', href: '/projects' },
   { label: 'Статьи', href: '/articles' },
   { label: 'Контакты', href: '/#contacts' },
 ];
@@ -30,6 +30,18 @@ const Navigation = () => {
   const navigate = useNavigate();
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const hasScrolledRef = useRef(false);
+
+  useEffect(() => {
+    if (location.pathname !== '/' || !location.hash) return;
+    if (hasScrolledRef.current) return;
+
+    hasScrolledRef.current = true;
+
+    const id = location.hash.slice(1);
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  }, [location.pathname, location.hash]);
 
   useEffect(() => {
     audioRef.current = getAtmosphereAudio();
@@ -110,23 +122,11 @@ useEffect(() => {
       return;
     }
 
+    hasScrolledRef.current = false;
     navigate(`/#${elementId}`);
     setIsOpen(false);
   };
 
-
-  useEffect(() => {
-    if (location.pathname !== '/' || !location.hash) return;
-
-    const id = location.hash.slice(1);
-
-    const t = setTimeout(() => {
-      const el = document.getElementById(id);
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
-    }, 0);
-
-    return () => clearTimeout(t);
-  }, [location.pathname, location.hash]);
 
 
   return (
@@ -140,7 +140,14 @@ useEffect(() => {
       <nav className="container mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
         <Link 
-          to="/" 
+          to="/"
+          onClick={(e) => {
+              if (location.pathname === "/") {
+                e.preventDefault(); // чтобы роутер не делал "пустую навигацию"
+                window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+                hasScrolledRef.current = false; // чтобы якоря потом снова работали
+              }
+          }}
           className="font-serif text-xl md:text-2xl text-foreground tracking-wide hover:text-primary transition-colors duration-medium"
         >
           Сабрина Салихова
