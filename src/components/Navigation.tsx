@@ -241,7 +241,7 @@ useEffect(() => {
                   <Link
                     to={item.href}
                     onClick={() => setIsOpen(false)}
-                    className="block px-4 py-3 text-lg font-serif text-foreground-muted hover:text-foreground hover:bg-accent/30 rounded-lg transition-all duration-medium"
+                    className="block px-4 py-3 text-2xl font-serif text-foreground-muted hover:text-foreground hover:bg-accent/30 rounded-lg transition-all duration-medium"
                   >
                     {item.label}
                   </Link>
@@ -249,7 +249,7 @@ useEffect(() => {
                   <button
                     type="button"
                     onClick={() => handleNavClick(item.href)}
-                    className="block w-full text-left px-4 py-3 text-lg font-serif text-foreground-muted hover:text-foreground hover:bg-accent/30 rounded-lg transition-all duration-medium"
+                    className="block w-full text-left px-4 py-3 text-2xl font-serif text-foreground-muted hover:text-foreground hover:bg-accent/30 rounded-lg transition-all duration-medium"
                   >
                     {item.label}
                   </button>

@@ -44,7 +44,7 @@ const Hero = () => {
             </h1>
             
             <p 
-              className="text-base md:text-xl text-primary font-serif tracking-wide mb-6 opacity-0 animate-fade-in-up"
+              className="text-xl md:text-4xl text-primary font-serif tracking-wide mb-6 opacity-90 animate-fade-in-up"
               style={{ animationDelay: '0.4s' }}
             >
               СТРАТЕГ-ВИЗИОНЕР • БИЗНЕС-КОУЧ • МАРКЕТОЛОГ • ИССЛЕДОВАТЕЛЬ • СЕРИЙНЫЙ ПРЕДПРИНИМАТЕЛЬ
@@ -54,7 +54,7 @@ const Hero = () => {
               className="text-foreground-muted text-lg leading-relaxed mb-10 opacity-0 animate-fade-in-up"
               style={{ animationDelay: '0.5s' }}
             >
-              Помогаю создать внеконкурентные уникальные продукты и проекты
+              Помогаю создать внеконкурентный уникальный продукт и проекты
               <br />
               на фундаменте большой бизнес-идеи со стратегией на годы.
             </p>
