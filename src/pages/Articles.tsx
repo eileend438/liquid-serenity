@@ -49,6 +49,14 @@ const Articles = () => {
                 style={{ transitionDelay: `${150 + index * 80}ms` }}
               >
 
+              {article.readingTime && (
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-xs text-foreground-muted">
+                    {article.readingTime}
+                  </span>
+                </div>
+              )}
+
 
                 <h2 className="font-serif text-xl text-foreground mb-4 leading-tight">
                   {article.title}
