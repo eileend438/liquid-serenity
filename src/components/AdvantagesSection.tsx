@@ -38,7 +38,7 @@ const advantages = [
               <img
                 src="/types.jpg"
                 alt="Комплексная конкурентоспособность"
-                className="max-w-3xl w-full rounded-xl border border-white/10"
+                className="w-[110%] sm:w-full max-w-none sm:max-w-3xl rounded-xl border border-white/10"
               />
             </div>
           </>
@@ -124,16 +124,8 @@ const AdvantagesSection = () => {
             </div>
           ))}
 
-          {/* Final statement */}
-          <div 
-            className={`text-center pt-8 transition-all duration-slow delay-500 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}
-          >
-            <p className="text-foreground-muted italic text-lg">
-              Мы структурируем и оцифровываем эти потенциалы — в продукт, стратегию и позицию.
-            </p>
-          </div>
+
+
         </div>
       </div>
     </section>
