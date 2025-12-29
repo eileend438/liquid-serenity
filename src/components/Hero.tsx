@@ -44,7 +44,7 @@ const Hero = () => {
             </h1>
             
             <p 
-              className="text-2xl md:text-3xl text-[#F2C94C] font-serif tracking-wide mb-6 opacity-0 animate-fade-in-up"
+              className="text-xl md:text-3xl text-[#F2C94C] font-serif tracking-wide mb-6 opacity-0 animate-fade-in-up"
               style={{ animationDelay: '0.4s' }}
             >
               СТРАТЕГ-ВИЗИОНЕР • БИЗНЕС-КОУЧ • МАРКЕТОЛОГ • ИССЛЕДОВАТЕЛЬ • СЕРИЙНЫЙ ПРЕДПРИНИМАТЕЛЬ

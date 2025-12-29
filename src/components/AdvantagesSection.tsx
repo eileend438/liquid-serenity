@@ -22,7 +22,7 @@ const advantages = [
     text:
     (
        <>
-           <strong className="font-black text-gold-gradient">Я женщина</strong>, и в этом моя сила как проводника в мир души гармоничных состояний. Эти состояния во многом недоступны мужчинам, потому что по своей природе они чаще действуют из логики и ума. А уникальность и пассионарность рождаются не из логики. Они воссоздаются через другие потенциалы, в которые я являюсь сильным проводником.
+           <strong className="font-black text-gold-gradient">Я женщина</strong>, и в этом моя сила как проводника в мир души гармоничных состояний. Эти состояния во многом недоступны мужчинам, потому что по своей природе они чаще действуют из логики и ума. А уникальность продуктов и пассионарность личности рождаются не из логики. Они воссоздаются через другие потенциалы, в которые я являюсь сильным проводником.
         </>
       ),
   },
@@ -72,7 +72,9 @@ const AdvantagesSection = () => {
     <section id="advantages" ref={sectionRef} className="py-32 relative">
       <div className="container mx-auto px-6">
         <h2
-          className={`font-serif text-display text-center text-foreground mb-16 transition-all duration-slow ${
+          className={`font-serif text-display text-center text-foreground mb-16 text-[28px] leading-tight
+                                                                                  md:text-[36px]
+                                                                                  lg:text-display transition-all duration-slow ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
@@ -124,6 +126,20 @@ const AdvantagesSection = () => {
             </div>
           ))}
 
+{/* CTA */}
+<div
+  className={`mt-16 flex flex-col sm:flex-row gap-4 justify-center opacity-0 animate-fade-in-up ${
+    isVisible ? 'opacity-100' : ''
+  }`}
+  style={{ animationDelay: '0.6s' }}
+>
+  <a
+    href="/articles"
+    className="btn-glass px-8 py-4 rounded-xl font-sans text-sm uppercase tracking-wider text-center"
+  >
+    Посмотреть статьи
+  </a>
+</div>
 
 
         </div>
