@@ -33,7 +33,10 @@ const Articles = () => {
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
             >
-              Стратегия, уникальность, продукт, мышление
+              <span className="block">Стратегия</span>
+                <span className="block">Уникальность</span>
+                <span className="block">Продукт</span>
+                <span className="block">Мышление</span>
             </p>
             <div className="gold-divider w-32 mx-auto mt-8" />
           </div>
