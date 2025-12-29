@@ -1,82 +1,50 @@
+import { useEffect, useState } from 'react';
+import type { ReactNode } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { ArrowLeft } from 'lucide-react';
-
-const articlesContent: Record<string, { title: string; category: string; content: string[] }> = {
-  'product-foundation': {
-    title: 'Продукт как основа бизнеса',
-    category: 'Стратегия',
-    content: [
-      'Сильный продукт — это не просто товар или услуга. Это решение, которое меняет жизнь клиента к лучшему. Продукт становится основой бизнеса, когда он создан на пересечении вашей уникальности и реальной потребности рынка.',
-      'Многие предприниматели начинают с вопроса "что продавать?", когда правильный вопрос — "какую проблему я решаю лучше всех?". Ответ на этот вопрос и есть ваш продукт.',
-      'В моей практике я видела десятки бизнесов, которые трансформировались после того, как нашли свою настоящую продуктовую основу. Это не про переупаковку — это про глубокое понимание своей миссии.',
-    ],
-  },
-  'uniqueness-strategy': {
-    title: 'Уникальность как стратегия',
-    category: 'Уникальность',
-    content: [
-      'Уникальность — это не маркетинговый ход. Это ваша природа, которую нужно раскрыть и структурировать. Когда бизнес строится на подлинной уникальности, конкуренция перестаёт существовать.',
-      'Я более 10 лет исследую тему уникальности и пассионарности личности. За это время я убедилась: каждый человек несёт в себе потенциал для создания чего-то неповторимого.',
-      'Стратегия на основе уникальности — это не про "быть не как все". Это про то, чтобы быть полностью собой и превратить это в устойчивое преимущество на годы вперёд.',
-    ],
-  },
-  'big-idea': {
-    title: 'BIG IDEA и опережение',
-    category: 'Продукт',
-    content: [
-      'Большая идея — это не просто амбициозная цель. Это видение, которое определяет все ваши действия и создаёт смысловое опережение на рынке.',
-      'Продукт 6-го технологического уклада требует нового подхода к созданию ценности. Это не про технологии ради технологий — это про понимание того, куда движется мир.',
-      'Когда у вас есть BIG IDEA, вы не гонитесь за трендами — вы их создаёте. Это и есть настоящее стратегическое преимущество.',
-    ],
-  },
-  'marketing-2026': {
-    title: 'Маркетинг 2026: новые правила',
-    category: 'Маркетинг',
-    content: [
-      'Покупательские привычки изменились навсегда. Люди устали от агрессивного маркетинга и ищут подлинность, глубину, смысл.',
-      'Маркетинг 2026 — это не про громкие обещания. Это про тихую уверенность, которая говорит сама за себя. Это про продукт, который не нуждается в манипуляциях.',
-      'Новые правила требуют нового мышления. Упаковка должна отражать суть, а не создавать иллюзию. Продажи должны быть продолжением ценности, а не отдельной функцией.',
-    ],
-  },
-  'second-order-thinking': {
-    title: 'Мышление лидера 2-го порядка',
-    category: 'Мышление',
-    content: [
-      'Мышление первого порядка — это реакция на события. Мышление второго порядка — это управление самими событиями через управление собой.',
-      'Лидерская опора строится на понимании своих программ и эмоций. Когда вы управляете своим мышлением, вы управляете своей реальностью.',
-      'Устойчивость в кризисах — это не про жёсткость. Это про гибкость, которая рождается из внутренней стабильности. И эту стабильность можно развить.',
-    ],
-  },
-  'passionarity-economics': {
-    title: 'Пассионарность и экономика',
-    category: 'Исследование',
-    content: [
-      'Пассионарность — это энергия созидания, которая движет прогрессом. Мои исследования показали прямую связь между пассионарностью личности и экономическими результатами.',
-      'Когда предприниматель действует из своей пассионарности, он создаёт не просто бизнес — он создаёт движение, которое притягивает ресурсы и людей.',
-      'Россия находится на пороге нового этапа развития. И те, кто сможет соединить свою пассионарность с экономическими возможностями, станут лидерами этого этапа.',
-    ],
-  },
-};
+import { articlesBySlug } from '@/content/articles';
+import { loadArticleContent } from '@/content/articles/loader';
 
 const ArticlePage = () => {
   const { slug } = useParams<{ slug: string }>();
-  const article = slug ? articlesContent[slug] : null;
+  const meta = slug ? articlesBySlug[slug] : null;
 
-  if (!article) {
+  const [content, setContent] = useState<ReactNode[] | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    async function run() {
+      if (!slug) {
+        setLoading(false);
+        setContent(null);
+        return;
+      }
+      setLoading(true);
+      const loaded = await loadArticleContent(slug);
+      if (!cancelled) {
+        setContent(loaded);
+        setLoading(false);
+      }
+    }
+
+    run();
+    return () => {
+      cancelled = true;
+    };
+  }, [slug]);
+
+  if (!meta) {
     return (
       <div className="min-h-screen">
         <Navigation />
         <main className="pt-32 pb-20">
           <div className="container mx-auto px-6 text-center">
-            <h1 className="font-serif text-display text-foreground mb-6">
-              Статья не найдена
-            </h1>
-            <Link
-              to="/articles"
-              className="inline-flex items-center gap-2 text-primary hover:text-primary-glow transition-colors"
-            >
+            <h1 className="font-serif text-display text-foreground mb-6">Статья не найдена</h1>
+            <Link to="/articles" className="inline-flex items-center gap-2 text-primary hover:text-primary-glow transition-colors">
               <ArrowLeft size={16} />
               Вернуться к статьям
             </Link>
@@ -90,13 +58,11 @@ const ArticlePage = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      
+
       <main className="pt-32 pb-20">
         <article className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
-            {/* Back link */}
-            <div className="mb-12">
-                <Link
+            <Link
               to="/articles"
               className="inline-flex items-center gap-2 text-foreground-muted hover:text-foreground transition-colors mb-10"
             >
@@ -104,25 +70,31 @@ const ArticlePage = () => {
               Все статьи
             </Link>
 
-
-            {/* Title */}
             <h1 className="font-serif text-display text-foreground mt-8 leading-tight">
-              {article.title}
+              {meta.title}
             </h1>
-            </div>
 
-            <div className="gold-divider mb-10" />
+            <div className="gold-divider mb-10 mt-6" />
 
-            {/* Content */}
-            <div className="space-y-6">
-              {article.content.map((paragraph, index) => (
-                <p key={index} className="text-lg text-foreground-muted leading-relaxed">
-                  {paragraph}
-                </p>
-              ))}
-            </div>
+            {loading && (
+              <div className="glass-card rounded-2xl p-6 text-foreground-muted">
+                Загружаю статью…
+              </div>
+            )}
 
+            {!loading && !content && (
+              <div className="glass-card rounded-2xl p-6 text-foreground-muted">
+                Контент не найден.
+              </div>
+            )}
 
+            {!loading && content && (
+              <div className="space-y-6">
+                {content.map((block, index) => (
+                  <div key={index}>{block}</div>
+                ))}
+              </div>
+            )}
           </div>
         </article>
       </main>

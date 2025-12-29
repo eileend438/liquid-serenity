@@ -3,45 +3,8 @@ import { Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { ArrowRight } from 'lucide-react';
+import { articles } from '@/content/articles';
 
-const articles = [
-  {
-    slug: 'product-foundation',
-    title: 'Продукт как основа бизнеса',
-    description: 'Почему сильный продукт — это фундамент устойчивого бизнеса и как создать его с нуля.',
-    category: 'Стратегия',
-  },
-  {
-    slug: 'uniqueness-strategy',
-    title: 'Уникальность как стратегия',
-    description: 'Как найти свою уникальность и превратить её в конкурентное преимущество на рынке.',
-    category: 'Уникальность',
-  },
-  {
-    slug: 'big-idea',
-    title: 'BIG IDEA и опережение',
-    description: 'Что такое большая идея и как она помогает опережать рынок на годы вперёд.',
-    category: 'Продукт',
-  },
-  {
-    slug: 'marketing-2026',
-    title: 'Маркетинг 2026: новые правила',
-    description: 'Как изменились покупательские привычки и что это значит для вашего маркетинга.',
-    category: 'Маркетинг',
-  },
-  {
-    slug: 'second-order-thinking',
-    title: 'Мышление лидера 2-го порядка',
-    description: 'Управление мышлением и эмоциями для устойчивости в кризисах и роста дохода.',
-    category: 'Мышление',
-  },
-  {
-    slug: 'passionarity-economics',
-    title: 'Пассионарность и экономика',
-    description: 'Связь между пассионарностью личности и экономическими процессами в бизнесе.',
-    category: 'Исследование',
-  },
-];
 
 const Articles = () => {
   const [isVisible, setIsVisible] = useState(false);
