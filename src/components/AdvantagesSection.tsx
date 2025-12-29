@@ -127,19 +127,32 @@ const AdvantagesSection = () => {
           ))}
 
 {/* CTA */}
+{/* Articles CTA */}
 <div
-  className={`mt-16 flex flex-col sm:flex-row gap-4 justify-center opacity-0 animate-fade-in-up ${
-    isVisible ? 'opacity-100' : ''
+  className={`mt-20 glass-card rounded-2xl p-8 md:p-10 text-center transition-all duration-slow ${
+    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
   }`}
-  style={{ animationDelay: '0.6s' }}
+  style={{ transitionDelay: '600ms' }}
 >
+  <h3 className="font-serif text-2xl md:text-3xl text-foreground mb-4">
+    Здесь заканчивается описание.<br />
+    Дальше — мышление.
+  </h3>
+
+  <p className="text-foreground-muted text-lg max-w-2xl mx-auto mb-8">
+    В статьях я разбираю то, что обычно остаётся за кадром:
+    логику сильных решений, причины провалов и механизмы,
+    которые делают бизнес устойчивым в реальности, а не в презентациях.
+  </p>
+
   <a
     href="/articles"
-    className="btn-glass px-8 py-4 rounded-xl font-sans text-sm uppercase tracking-wider text-center"
+    className="btn-gold px-10 py-4 rounded-xl font-sans text-sm uppercase tracking-wider inline-flex"
   >
-    Посмотреть статьи
+    Читать статьи
   </a>
 </div>
+
 
 
         </div>
