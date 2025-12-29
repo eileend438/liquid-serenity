@@ -22,7 +22,6 @@ const sections: Section[] = [
       "Есть предприниматели, которые годами «готовятся».",
       "Читают книги, ходят на вебинары, собирают мнения родственников…",
       "И есть другой тип людей.",
-      "Те, кто в восемнадцать открывают голубой океан, потому что ночью им пришла идея — и спать было некогда.",
       "Это история именно про такой путь.",
     ],
   },
@@ -231,7 +230,7 @@ export default function ProjectsPage() {
                          <br />Существовал 3 года.
                     </div>
                     </li>
-                    <li><div className="font-semibold text-foreground">4. Премиум-ателье и бренд вечерних платьев Sabrina&apos;s Secret</div>
+                    <li><div className="font-semibold text-foreground">4. Премиум-ателье и бренд вечерних платьев Sabrina Secret</div>
                     <div className="text-sm text-foreground-muted/80 leading-relaxed mt-1">
                         Лидер ниши за счет уникальности, обошла 70+ конкурентов в Уфе.
                         <br />Существовал 10+ лет.
@@ -254,9 +253,9 @@ export default function ProjectsPage() {
                     </div>
 
                     </li>
-                    <li><div className="font-semibold text-foreground">7. Прокат платьев</div>
+                    <li><div className="font-semibold text-foreground">7. Прокат вечерних платьев</div>
                     <div className="text-sm text-foreground-muted/80 leading-relaxed mt-1">
-                         Создатель ниши - голубой океан.
+                         Создатель ниши - голубой океан (2013 г.)
                          <br />Существовал 13+ лет.
                       </div>
 
@@ -272,14 +271,14 @@ export default function ProjectsPage() {
                   <ol className="space-y-4 text-foreground-muted">
                     <li><div className="font-semibold text-foreground">8. Unique People</div>
                     <div className="text-sm text-foreground-muted/80 leading-relaxed mt-1">
-                         <br />Unique People - система по раскрытию уникальности и творческого потенциала.
-                         <br />Комьюнити Unique People. Запуск - январь 2026.
-                         <br />Академия Unique People. Запуск - апрель 2026.
-                         <br />Приложение Unique People (UP!).
+                         Unique People - экосистема по раскрытию уникальности и творческого потенциала.
+                         <br />
+                         <br />Сообщество Unique People - запуск в январе 2026 г.
+                         <br />Академия Unique People - запуск в апреле 2026 г.
+                         <br />Приложение UP!.
                          <br />Unique People - уникальные люди.
                          <br />Unique Product - уникальный продукт.
                          <br />Unique Project - уникальный проект.
-                         <br />Консультирование по комплексной конкурентоспособности.
                          <br />Мощная стратегия выхода на международный рынок.
                     </div>
 
@@ -287,7 +286,7 @@ export default function ProjectsPage() {
                     <li><div className="font-semibold text-foreground">9. Новый премиальный бренд женской одежды MUZA</div>
                     <div className="text-sm text-foreground-muted/80 leading-relaxed mt-1">
                          Запуск - март 2026.
-                         <br />Участие в Mercedes-Benz Fashion Week - весна 2026.
+                         <br />Участие в Mercedes-Benz Fashion Week - весна/осень 2026 г.
                     </div>
 
                     </li>
