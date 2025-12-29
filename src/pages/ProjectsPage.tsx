@@ -211,46 +211,53 @@ export default function ProjectsPage() {
                     <li>
                       <div className="font-semibold text-foreground">1. Гриль (сеть)</div>
                       <div className="text-sm text-foreground-muted/80 leading-relaxed mt-1">
-                        Создатель ниши - голубой океан, существовал 3 года, хорошо продан на пике
-                        во время уже образовавшийся большой конкуренции на рынке.
+                        Создатель ниши - голубой океан.
+                        <br />Существовал 3 года.
+                        <br />Хорошо продан на пике во время уже образовавшийся большой конкуренции на рынке.
                       </div>
                     </li>
 
                     <li>
                       <div className="font-semibold text-foreground">2. Такси</div>
                       <div className="text-sm text-foreground-muted/80 leading-relaxed mt-1">
-                        Лидер рынка; за счёт уникальности обошла в своём городе 50+ конкурентов; существовал 7 лет.
+                        Лидер рынка; за счёт уникальности обошла в своём городе 50+ конкурентов.
+                        <br />Существовал 7 лет.
                       </div>
                     </li>
 
                     <li><div className="font-semibold text-foreground">3. Мини-гостиницы</div>
                     <div className="text-sm text-foreground-muted/80 leading-relaxed mt-1">
-                         Лидер рынка за счет уникальности, существовал 3 года.
+                         Лидер рынка за счет уникальности.
+                         <br />Существовал 3 года.
                     </div>
                     </li>
                     <li><div className="font-semibold text-foreground">4. Премиум-ателье и бренд вечерних платьев Sabrina&apos;s Secret</div>
                     <div className="text-sm text-foreground-muted/80 leading-relaxed mt-1">
-                        Лидер ниши за счет уникальности, обошла 70+ конкурентов в Уфе, существовал 10+ лет.
+                        Лидер ниши за счет уникальности, обошла 70+ конкурентов в Уфе.
+                        <br />Существовал 10+ лет.
                     </div>
                     </li>
 
                     <li><div className="font-semibold text-foreground">5. Концептуальная студия</div>
                                         <div className="text-sm text-foreground-muted/80 leading-relaxed mt-1">
                                                 (фотостудия + make-up-студия + прокат платьев)
-                                               <br />Лидер ниши за счет уникальности. Существовал 8+ лет.
+                                               <br />Лидер ниши за счет уникальности.
+                                               <br />Существовал 8+ лет.
                                         </div>
                                         </li>
 
 
                     <li><div className="font-semibold text-foreground">6. Бренд женской одежды Sabrina Salihova</div>
                     <div className="text-sm text-foreground-muted/80 leading-relaxed mt-1">
-                         Лидер ниши за счет уникальности, работа с первыми лицами и известными звездами шоу-бизнеса. Существовал 10+ лет.
+                         Лидер ниши за счет уникальности, работа с первыми лицами и известными звездами шоу-бизнеса.
+                         <br />Существовал 10+ лет.
                     </div>
 
                     </li>
                     <li><div className="font-semibold text-foreground">7. Прокат платьев</div>
                     <div className="text-sm text-foreground-muted/80 leading-relaxed mt-1">
-                         Создатель ниши - голубой океан. Существовал 13+ лет.
+                         Создатель ниши - голубой океан.
+                         <br />Существовал 13+ лет.
                       </div>
 
                     </li>
@@ -265,20 +272,21 @@ export default function ProjectsPage() {
                   <ol className="space-y-4 text-foreground-muted">
                     <li><div className="font-semibold text-foreground">8. Unique People</div>
                     <div className="text-sm text-foreground-muted/80 leading-relaxed mt-1">
-                         Академия Unique People по раскрытию уникальности и творческого потенциала. Запуск - январь 2026.
-                         Комьюнити Unique People. Запуск - апрель 2026.
-                         Unique People (UP) - приложение по раскрытию
-                         Unique People - уникальные люди.
-                         Unique Product - уникальный продукт.
-                         Unique Project - уникальный проект.
-                         Мощная стратегия выхода на международный рынок.
+                         Академия Unique People по раскрытию уникальности и творческого потенциала.
+                         <br />Запуск - январь 2026.
+                         <br />Комьюнити Unique People. Запуск - апрель 2026.
+                         <br />Unique People (UP) - приложение по раскрытию
+                         <br />Unique People - уникальные люди.
+                         <br />Unique Product - уникальный продукт.
+                         <br />Unique Project - уникальный проект.
+                         <br />Мощная стратегия выхода на международный рынок.
                     </div>
 
                     </li>
                     <li><div className="font-semibold text-foreground">9. Новый премиальный бренд женской одежды MUZA</div>
                     <div className="text-sm text-foreground-muted/80 leading-relaxed mt-1">
                          Запуск - март 2026.
-                         Участие в Mercedes-Benz Fashion Week - весна 2026.
+                         <br />Участие в Mercedes-Benz Fashion Week - весна 2026.
                     </div>
 
                     </li>
