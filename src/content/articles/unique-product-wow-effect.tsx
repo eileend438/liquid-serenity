@@ -12,7 +12,7 @@ const content: ReactNode[] = [
   </p>,
 
   <p className="text-foreground-muted text-lg leading-relaxed">
-    Если вы хотите жить в бизнес-мире, где:
+    ЕСЛИ ВЫ ХОТИТЕ ЖИТЬ В БИЗНЕС-МИРЕ, ГДЕ:
   </p>,
 
   <ul className="list-disc pl-6 text-foreground-muted text-lg leading-relaxed space-y-2">
@@ -31,7 +31,7 @@ const content: ReactNode[] = [
   </p>,
 
   <p className="font-black text-gold-gradient text-lg leading-relaxed">
-    Если вы хотите жить в бизнес-мире, где:
+    ЕСЛИ ВЫ ХОТИТЕ ЖИТЬ В БИЗНЕС-МИРЕ, ГДЕ:
   </p>,
 
   <ul className="list-disc pl-6 font-black text-gold-gradient text-lg leading-relaxed space-y-2 marker:text-[#D4A441]">
@@ -105,7 +105,7 @@ const content: ReactNode[] = [
 
   <div className="glass-card border border-primary/30 rounded-2xl p-8 text-center">
     <p className="font-black text-gold-gradient text-xl">
-      Главное правило:
+      ГАВНОЕ ПРАВИЛО:
     </p>
     <p className="font-black text-gold-gradient text-xl mt-2">
       Слабый продукт делает рекламу расходом.
@@ -131,7 +131,7 @@ const content: ReactNode[] = [
   </p>,
 
   <p className="font-black text-gold-gradient text-lg leading-relaxed">
-    Давайте зафиксируем реальность.
+    ДАВАЙТЕ ЗАФИКСИРУЕМ РЕАЛЬНОСТЬ.
   </p>,
 
   <p className="text-foreground-muted text-lg leading-relaxed">
@@ -190,7 +190,7 @@ const content: ReactNode[] = [
 
 
   <p className="font-black text-gold-gradient text-lg leading-relaxed">
-      Дополнительные честные вопросы себе (10 минут):
+      ДОПОЛНИТЕЛЬНЫЕ ЧЕСТНЫЕ ВОПРОСЫ СЕБЕ (10 минут):
     </p>,
 
     <ol className="list-decimal pl-6 text-foreground-muted text-lg leading-relaxed space-y-2">
