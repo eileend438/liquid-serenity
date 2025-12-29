@@ -10,6 +10,8 @@ type Section = {
   kind?: "main" | "section";
 };
 
+
+
 const sections: Section[] = [
   {
     id: "intro",
@@ -28,7 +30,6 @@ const sections: Section[] = [
   {
     id: "p1",
     title: "1. Пищевое производство/гриль - сеть: ржавый тонар, огромная курица и начало империи",
-    subtitle: "(Первой открыла эту нишу - голубой океан; существовал 3 года, хорошо продан на пике во время уже образовавшийся большой конкуренции на рынке)",
     paragraphs: [
       "Моя карьера началась не с инвесторов и не с бизнеса «как у всех».",
       "А с поездки в Москву, подаренной родителями за мое самостоятельное поступление в самый престижный вуз.",
@@ -52,7 +53,6 @@ const sections: Section[] = [
   {
     id: "p2",
     title: "2. Таксопарк: жёлтые машины, поджоги и лидерство среди 50 конкурентов",
-    subtitle: "(Лидер рынка, за счет уникальности обошла в своем городе 50+ конкурентов; существовал 7 лет)",
     paragraphs: [
       "Первый год ИП — первая машина.",
       "Продажа сети гриль — ремонт родителям, подарок брату, море, создание нового проекта: покупка таксопарка.",
@@ -75,7 +75,6 @@ const sections: Section[] = [
   {
     id: "p3",
     title: "3. Мини-гостиницы: когда «обычная квартира» вдруг становится отелем",
-    subtitle: "(Лидер рынка за счет уникальности, существовал 3 года)",
     paragraphs: [
       "Третий проект родился после того, как я несколько раз сняла квартиры в поездках.",
       "И каждый раз думала:",
@@ -197,6 +196,103 @@ export default function ProjectsPage() {
       <main className="py-32">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto glass-card rounded-2xl p-8 md:p-12">
+          {/* Projects list (before main text) */}
+            <section className="mb-12">
+              <h2 className="font-serif text-2xl md:text-3xl mb-6 text-center">
+                <GoldTitle>Проекты</GoldTitle>
+              </h2>
+
+              <div className="grid gap-8 md:grid-cols-2">
+                {/* Past */}
+                <div className="glass-card rounded-2xl p-6">
+                  <div className="font-black text-gold-gradient mb-4">Прошлые</div>
+
+                  <ol className="space-y-4 text-foreground-muted">
+                    <li>
+                      <div className="font-semibold text-foreground">1. Гриль (сеть)</div>
+                      <div className="text-sm text-foreground-muted/80 leading-relaxed mt-1">
+                        Создатель ниши - голубой океан, существовал 3 года, хорошо продан на пике
+                        во время уже образовавшийся большой конкуренции на рынке.
+                      </div>
+                    </li>
+
+                    <li>
+                      <div className="font-semibold text-foreground">2. Такси</div>
+                      <div className="text-sm text-foreground-muted/80 leading-relaxed mt-1">
+                        Лидер рынка; за счёт уникальности обошла в своём городе 50+ конкурентов; существовал 7 лет.
+                      </div>
+                    </li>
+
+                    <li><div className="font-semibold text-foreground">3. Мини-гостиницы</div>
+                    <div className="text-sm text-foreground-muted/80 leading-relaxed mt-1">
+                         Лидер рынка за счет уникальности, существовал 3 года.
+                    </div>
+                    </li>
+                    <li><div className="font-semibold text-foreground">4. Премиум-ателье и бренд вечерних платьев Sabrina&apos;s Secret</div>
+                    <div className="text-sm text-foreground-muted/80 leading-relaxed mt-1">
+                        Лидер ниши за счет уникальности, обошла 70+ конкурентов в Уфе, существовал 10+ лет.
+                    </div>
+                    </li>
+
+                    <li><div className="font-semibold text-foreground">5. Концептуальная студия</div>
+                                        <div className="text-sm text-foreground-muted/80 leading-relaxed mt-1">
+                                                (фотостудия + make-up-студия + прокат платьев)
+                                               <br />Лидер ниши за счет уникальности. Существовал 8+ лет.
+                                        </div>
+                                        </li>
+
+
+                    <li><div className="font-semibold text-foreground">6. Бренд женской одежды Sabrina Salihova</div>
+                    <div className="text-sm text-foreground-muted/80 leading-relaxed mt-1">
+                         Лидер ниши за счет уникальности, работа с первыми лицами и известными звездами шоу-бизнеса. Существовал 10+ лет.
+                    </div>
+
+                    </li>
+                    <li><div className="font-semibold text-foreground">7. Прокат платьев</div>
+                    <div className="text-sm text-foreground-muted/80 leading-relaxed mt-1">
+                         Создатель ниши - голубой океан. Существовал 13+ лет.
+                      </div>
+
+                    </li>
+
+                  </ol>
+                </div>
+
+                {/* Current */}
+                <div className="glass-card rounded-2xl p-6">
+                  <div className="font-black text-gold-gradient mb-4">Настоящие</div>
+
+                  <ol className="space-y-4 text-foreground-muted">
+                    <li><div className="font-semibold text-foreground">8. Unique People</div>
+                    <div className="text-sm text-foreground-muted/80 leading-relaxed mt-1">
+                         Академия Unique People по раскрытию уникальности и творческого потенциала. Запуск - январь 2026.
+                         Комьюнити Unique People. Запуск - апрель 2026.
+                         Unique People (UP) - приложение по раскрытию
+                         Unique People - уникальные люди.
+                         Unique Product - уникальный продукт.
+                         Unique Project - уникальный проект.
+                         Мощная стратегия выхода на международный рынок.
+                    </div>
+
+                    </li>
+                    <li><div className="font-semibold text-foreground">9. Новый премиальный бренд женской одежды MUZA</div>
+                    <div className="text-sm text-foreground-muted/80 leading-relaxed mt-1">
+                         Запуск - март 2026.
+                         Участие в Mercedes-Benz Fashion Week - весна 2026.
+                    </div>
+
+                    </li>
+                  </ol>
+                </div>
+              </div>
+
+              <div className="gold-divider mt-10" />
+            </section>
+
+
+
+
+
             {sections.map((s, idx) => (
               <section key={s.id}>
                 {s.kind === "main" ? (
