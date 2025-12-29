@@ -61,7 +61,7 @@ const ArticlePage = () => {
 
       <main className="pt-32 pb-20">
         <article className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <Link
               to="/articles"
               className="inline-flex items-center gap-2 text-foreground-muted hover:text-foreground transition-colors mb-10"

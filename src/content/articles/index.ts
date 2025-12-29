@@ -15,6 +15,20 @@ export const articles: ArticleMeta[] = [
     description: 'Почему сильный продукт — это фундамент устойчивого бизнеса и как создать его с нуля.',
   },
 
+  {
+      slug: 'strategy-2026',
+      title: 'Стратегия 2026. Разделение бизнесов на 2 пути. Переход бизнес-мира в 6 технологический уклад',
+      readingTime: '7 минут',
+      description: '...',
+    },
+
+{
+      slug: 'complex-competitiveness',
+      title: 'В чём сила комплексной конкурентоспособности',
+      readingTime: '7 минут',
+      description: '...',
+    },
+
 
   // ...
 ];
