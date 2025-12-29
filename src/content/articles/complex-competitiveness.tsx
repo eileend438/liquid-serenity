@@ -1,4 +1,5 @@
 import React from "react";
+import { Send, MessageCircle } from 'lucide-react';
 
 const articleContent: React.ReactNode[] = [
   (
@@ -219,6 +220,26 @@ const articleContent: React.ReactNode[] = [
       Сабрине Салиховой.</strong>
     </p>
   ),
+<div className="glass-card rounded-2xl p-8 md:p-12 text-center mb-8">
+  <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center">
+    <MessageCircle className="w-7 h-7 text-primary" />
+  </div>
+
+  <p className="text-foreground-muted text-lg mb-2">Telegram</p>
+  <p className="font-serif text-2xl text-foreground mb-8">@Sabrina_Salihova</p>
+
+  <a
+    href="https://t.me/Sabrina_Salihova"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center gap-3 btn-gold px-10 py-4 rounded-xl font-sans text-sm uppercase tracking-wider"
+  >
+    <Send size={18} />
+    Написать в Telegram
+  </a>
+</div>
 ];
+
+
 
 export default articleContent;
