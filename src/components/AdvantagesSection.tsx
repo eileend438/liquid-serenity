@@ -29,20 +29,21 @@ const advantages = [
   {
       number: '04',
       text: (
-              <>
-                 <strong className="font-black text-gold-gradient">Я единственная, кто занимается комплексной конкурентоспособностью:</strong>
-              </>
-             ),
-                  items: [
-                    { title: 'Идеологическая', desc: 'Смыслы и мировоззрение' },
-                    { title: 'Смысловая', desc: 'Зачем и ради чего существует продукт' },
-                    { title: 'Маркетинговая', desc: 'Позиционирование и привлечение клиентов' },
-                    { title: 'Финансовая', desc: 'Деньги, модель прибыли, устойчивость' },
-                    { title: 'Продуктовая', desc: 'Что именно вы создаёте и почему это выбирают' },
-                    { title: 'Стратегическая', desc: 'Долгосрочное развитие и преимущество на рынке — сильное наследие' },
-                  ],
+          <>
+            <strong className="font-black text-gold-gradient block text-center">
+              Я единственная, кто занимается комплексной конкурентоспособностью:
+            </strong>
 
-             },
+            <div className="mt-8 flex justify-center">
+              <img
+                src="/types.jpg"
+                alt="Комплексная конкурентоспособность"
+                className="max-w-3xl w-full rounded-xl border border-white/10"
+              />
+            </div>
+          </>
+        ),
+      },
 ];
 
 const AdvantagesSection = () => {

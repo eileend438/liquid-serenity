@@ -16,17 +16,17 @@ const ExperienceSection = () => {
                   <div className="text-foreground-muted text-lg leading-relaxed space-y-6">
 
                     <p>
-                      Я заходила в рынки, формировала новые категории,
-                      выстраивала продукт, сервис и стратегию — и выходила из проектов
-                      на пике, когда они становились массовыми.
-                    </p>
-
-                    <p>
-                      За 15+ лет я создала и масштабировала проекты в food-индустрии,
+                      За 15+ лет я создала проекты в food-индустрии,
                       сервисе, гостеприимстве, fashion и креативной экономике.
                       Во всех случаях ключом были не бюджеты, а вкус, чувствительность
                       к рынку и умение видеть пустоты.
                     </p>
+
+                    <p>
+                                          Я заходила в рынки, формировала новые категории,
+                                          выстраивала продукт, сервис и стратегию — и выходила из проектов
+                                          на пике, когда они становились массовыми.
+                                        </p>
 
                     <p>
                       Эти проекты — не про удачу и не про «оказаться в нужное время».
@@ -45,13 +45,21 @@ const ExperienceSection = () => {
                   </div>
                 </div>
 
-              {/* Right: photo placeholder */}
-                <div className="glass-card rounded-2xl p-8 md:p-10">
-                  <div className="h-full rounded-2xl border border-white/10 bg-white/5 flex items-center justify-center text-foreground-muted text-sm">
-                            тут будет фото
-                  </div>
+              {/* Right: photo */}
+              <div className="glass-card rounded-2xl p-6 md:p-8 flex flex-col">
+                <div className="relative overflow-hidden rounded-xl border border-white/10 h-[420px]">
+                  <img
+                    src="/edinorog.jpg"
+                    alt="Сабрина Салихова и Оскар Хартман"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
+
+                <p className="mt-3 text-xs text-foreground-muted/80 leading-snug">
+                  На фото: я, Оскар Хартман (основатель и инвестор 150+ компаний) и единорог 🦄 от него
+                </p>
               </div>
+            </div>
       </div>
     </section>
   );
