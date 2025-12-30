@@ -1,0 +1,132 @@
+import React from 'react';
+
+type Align = "left" | "center" | "right";
+
+type TextMark = "bold" | "italic";
+
+type InlineNode =
+  | { type: "text"; text: string; marks?: TextMark[] }
+  | { type: "br" };
+
+type BlockNode =
+  | { type: "paragraph"; align?: Align; content: InlineNode[] }
+  | { type: "orderedList"; items: InlineNode[][] }
+  | { type: "bulletList"; items: InlineNode[][] };
+
+export const content: BlockNode[] = [
+  {
+    type: "paragraph",
+    content: [
+      {
+        type: "text",
+        text: "ОСНОВНЫЕ 3 ПРИЧИНЫ ПОЧЕМУ МАЛО ПРОДАЖ",
+        marks: ["bold"],
+      },
+    ],
+  },
+  {
+    type: "orderedList",
+    items: [
+      [
+        {
+          type: "text",
+          text: "Когда дело в плохом продукте, который требует бесконечные вложения в рекламу (высокий САС).",
+          marks: ["bold"],
+        },
+      ],
+      [
+        {
+          type: "text",
+          text: "Когда дело в личности предпринимателя/эксперта (нет ЗАЧЕМ и КУДА)",
+          marks: ["bold"],
+        },
+      ],
+      [
+        {
+          type: "text",
+          text: "Продажи (маркетинг).",
+          marks: ["bold"],
+        },
+      ],
+    ],
+  },
+  {
+    type: "paragraph",
+    content: [
+      {
+        type: "text",
+        text: "Но в 95% случаев ключевым все равно будет всегда слабый ПРОДУКТ, потому что когда он СИЛЬНЫЙ, то продается: ",
+      },
+    ],
+  },
+  {
+    type: "orderedList",
+    items: [
+      [
+        {
+          type: "text",
+          text: "При минимальных вложениях в рекламу (маркетинг)",
+        },
+      ],
+      [
+        {
+          type: "text",
+          text: "Иногда даже без вложений",
+        },
+      ],
+      [
+        {
+          type: "text",
+          text: "Даже при неграмотном маркетинге или его отсутствии, он все равно продается (как минимум по сарафанке, потому что такой продукт невозможно не рекомендовать, о нем хочется кричать, когда клиенты становятся фанатами и амбассадорами вашего продукта.)",
+        },
+      ],
+    ],
+  },
+  {
+    type: "paragraph",
+    content: [
+      {
+        type: "text",
+        text: "Я работаю на трех основных столпах, на которых стоит любой успешный бизнес.",
+      },
+    ],
+  },
+  {
+    type: "paragraph",
+    content: [
+      { type: "text", text: "Это ПРОДУКТ, ЛИЧНОСТЬ, ПРОДАЖИ." },
+    ],
+  },
+  {
+    type: "paragraph",
+    content: [
+      {
+        type: "text",
+        text: "* Подробно с каждым пунктом, а также решениями этих проблем, которые я предлагаю, основываясь на свой многолетний опыт, знания и авторские методы, можно ознакомиться в таблицах ниже.",
+      },
+    ],
+  },
+  {
+    type: "paragraph",
+    content: [{ type: "br" }],
+  },
+  {
+    type: "paragraph",
+    content: [{ type: "br" }],
+  },
+  {
+    type: "paragraph",
+    content: [{ type: "text", text: "<br />" }],
+  },
+  {
+    type: "paragraph",
+    align: "center",
+    content: [
+      {
+        type: "text",
+        text: "Таблица 1. «Плохой продукт» vs «Хороший продукт» (прибыльный, внеконкурентный, наследуемый)",
+        marks: ["italic"],
+      },
+    ],
+  },
+];
