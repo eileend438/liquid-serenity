@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom"; //
 
 type Section = {
   id: string;
@@ -10,7 +10,8 @@ type Section = {
   kind?: "main" | "section";
 };
 
-
+const sections: Section[] = [];
+/*
 
 const sections: Section[] = [
   {
@@ -182,6 +183,7 @@ const sections: Section[] = [
     ],
   },
 ];
+*/
 
 function GoldTitle({ children }: { children: string }) {
   return <strong className="font-black text-gold-gradient">{children}</strong>;
