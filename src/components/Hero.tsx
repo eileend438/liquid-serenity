@@ -51,13 +51,22 @@ const Hero = () => {
             </p>
             
             <p 
-              className="text-foreground-muted text-lg leading-relaxed mb-10 opacity-0 animate-fade-in-up"
+              className="text-foreground-muted text-lg leading-relaxed mb-4 opacity-0 animate-fade-in-up"
               style={{ animationDelay: '0.5s' }}
             >
               Помогаю создать внеконкурентный уникальный продукт и проекты
               <br />
               на фундаменте большой бизнес-идеи
               <br />со стратегией на годы.
+            </p>
+
+            <p
+              className="text-foreground-muted/80 text-sm md:text-base leading-relaxed mb-8 opacity-0 animate-fade-in-up"
+              style={{ animationDelay: '0.55s' }}
+            >
+              Для собственников бизнеса, которые упёрлись в потолок,
+              устали от конкуренции и хотят понятную долговременную
+              стратегию, а не хаотичные решения.
             </p>
 
             {/* CTAs */}

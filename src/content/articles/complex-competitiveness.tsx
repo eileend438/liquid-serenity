@@ -112,7 +112,7 @@ const articleContent: React.ReactNode[] = [
 
   (
     <p key="p17">
-      <strong className="font-black text-gold-gradient italic">Результат:</strong> знание своей уникальности, миссии, сильная связь с собой, умение слышать себя и полное понимание своего потенциала.
+      <strong className="font-black text-gold-gradient italic">РЕЗУЛЬТАТ:</strong> Чёткое понимание, какой бизнес вы строите и почему именно он имеет право на рост.
     </p>
   ),
 
@@ -134,7 +134,7 @@ const articleContent: React.ReactNode[] = [
 
   (
     <p key="p21">
-      <strong className="font-black text-gold-gradient italic">Результат:</strong> знание своей большой бизнес-идеи. Расширение сознания. Стратегия на несколько лет.
+      <strong className="font-black text-gold-gradient italic">РЕЗУЛЬТАТ:</strong> Ясная BIG IDEA, которая становится опорой для всех стратегических решений, а не абстрактной философией.
     </p>
   ),
 
@@ -158,9 +158,7 @@ const articleContent: React.ReactNode[] = [
 
   (
     <p key="p25">
-      <strong className="font-black text-gold-gradient italic">Результат:</strong> знание маркетинга нового времени,
-      <br />сильная упаковка по правилам 2026 года,
-      <br />высокие продажи и прибыль.
+      <strong className="font-black text-gold-gradient italic">РЕЗУЛЬТАТ:</strong> Понимание, как продавать без демпинга и постоянного давления, в логике рынка 2026+.
     </p>
   ),
 
@@ -183,7 +181,7 @@ const articleContent: React.ReactNode[] = [
 
   (
     <p key="p28">
-      <strong className="font-black text-gold-gradient italic">Результат:</strong> мышление лидера, бизнес-мышление 2-го порядка ={'>'} стабильное высокоэнергетическое состояние  ={'>'} увеличение дохода.
+      <strong className="font-black text-gold-gradient italic">РЕЗУЛЬТАТ:</strong> Мышление собственника 2-го порядка, при котором бизнес перестаёт зависеть от вашего постоянного включения.
     </p>
   ),
 
