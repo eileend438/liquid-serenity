@@ -23,7 +23,7 @@ const text = `
 
 Так появляются «качели»: доход то растёт, то падает; приоритеты постоянно меняются; команда теряет понимание направления.
 
-Миссия выполняет функцию стратегического фильтра. Любая инициатива оценивается через вопрос: усиливает ли она основную идею бизнеса? Если нет — её проще отклонить, даже если она обещает быструю прибыль.
+Миссия выполняет функцию стратегического фильтра. Любая инициатива оценивается через вопрос: усиливает ли она **основную идею бизнеса**? Если нет — её проще отклонить, даже если она обещает быструю прибыль.
 
 Это убирает метания и формирует устойчивую траекторию развития.
 
@@ -37,7 +37,7 @@ const text = `
 
 Big Idea позволяет выйти из прямого сравнения. Вместо борьбы за идентичные характеристики появляется собственная смысловая категория, где конкуренция становится вторичной.
 
-**Цель, стратегия, миссия и Big Idea: принципиальные различия**
+**Цель, стратегия, миссия и Big Idea (Большая идея): принципиальные различия**
 
 Эти понятия часто смешивают, хотя они относятся к разным уровням управления.
 
@@ -169,6 +169,8 @@ Big Idea — уникальная архитектура поверх него.
 
 Если ответ найден — каждый шаг становится частью осмысленной траектории.
 
+Если у вас нет миссии и Big Idea, то для решения этой задачи оставьте заявку на диагностику.
+
 `;
 const content: ReactNode[] = [
   <ReactMarkdown
@@ -190,6 +192,25 @@ const content: ReactNode[] = [
   >
     {text}
   </ReactMarkdown>,
+ // 🔘 КНОПКА
+<div className="glass-card rounded-2xl p-8 md:p-12 text-center mb-8">
+  <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center">
+    <MessageCircle className="w-7 h-7 text-primary" />
+  </div>
+
+  <p className="text-foreground-muted text-lg mb-2">Telegram</p>
+  <p className="font-serif text-2xl text-foreground mb-8">@Sabrina_Salihova</p>
+
+  <a
+    href="https://t.me/Sabrina_Salihova"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center gap-3 btn-gold px-10 py-4 rounded-xl font-sans text-sm uppercase tracking-wider"
+  >
+    <Send size={18} />
+    Написать в Telegram
+  </a>
+</div>,
 ];
 
 export default content;
