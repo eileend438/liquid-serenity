@@ -105,7 +105,7 @@ const content: ReactNode[] = [
 
   <div className="glass-card border border-primary/30 rounded-2xl p-8 text-center">
     <p className="font-black text-gold-gradient text-xl">
-      ГАВНОЕ ПРАВИЛО:
+      ГЛАВНОЕ ПРАВИЛО:
     </p>
     <p className="font-black text-gold-gradient text-xl mt-2">
       Слабый продукт делает рекламу расходом.
