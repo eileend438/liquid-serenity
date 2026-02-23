@@ -1,7 +1,9 @@
 import { ArrowDown } from 'lucide-react';
 import sabrinaPhoto from '@/assets/sabrina-photo.jpg';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Hero = () => {
+    const navigate = useNavigate();
   return (
     <section className="relative min-h-screen pb-28 flex items-center justify-center overflow-hidden water-texture">
       {/* Background gradient layers */}
@@ -82,12 +84,12 @@ const Hero = () => {
               >
                 Написать в Telegram
               </a>
-              <a
-                href="/articles"
-                className="btn-glass px-8 py-4 rounded-xl font-sans text-sm uppercase tracking-wider text-center"
-              >
-                Посмотреть статьи
-              </a>
+              <button
+                    onClick={() => navigate('/articles')}
+                    className="btn-glass px-8 py-4 rounded-xl font-sans text-sm uppercase tracking-wider text-center"
+                  >
+                    Посмотреть статьи
+                  </button>
             </div>
           </div>
         </div>

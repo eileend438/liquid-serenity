@@ -107,25 +107,29 @@ useEffect(() => {
   }, [location]);
 
   const handleNavClick = (href: string) => {
-    if (!href.startsWith('/#')) {
-      navigate(href);
-      setIsOpen(false);
-      return;
-    }
-
-    const elementId = href.slice(2);
-
-    if (location.pathname === '/') {
-      const el = document.getElementById(elementId);
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
-      setIsOpen(false);
-      return;
-    }
-
-    hasScrolledRef.current = false;
-    navigate(`/#${elementId}`);
     setIsOpen(false);
-  };
+
+        // Если это якорная ссылка (на главной)
+        if (href.startsWith('/#')) {
+          const elementId = href.slice(2);
+
+          if (location.pathname === '/') {
+            // Мы уже на главной — просто плавно скроллим
+            const el = document.getElementById(elementId);
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+          } else {
+            // Мы на другой странице — переходим на главную к якорю
+            // В HashRouter это автоматически станет /#/
+            hasScrolledRef.current = false;
+            navigate(`/${href.slice(1)}`);
+          }
+        } else {
+          // Обычная навигация (Проекты, Статьи)
+          navigate(href);
+        }
+      };
+
+
 
 
 
@@ -160,24 +164,15 @@ useEffect(() => {
           <ul className="hidden lg:flex items-center gap-1">
             {navItems.map((item) => (
               <li key={item.label}>
-                {item.href.startsWith('/articles') ? (
-                  <Link
-                    to={item.href}
-                    className="px-4 py-2 text-sm font-sans text-foreground-muted hover:text-foreground transition-colors duration-medium relative group"
-                  >
-                    {item.label}
-                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-px bg-primary group-hover:w-3/4 transition-all duration-medium" />
-                  </Link>
-                ) : (
-                  <button
-                    type="button"
-                    onClick={() => handleNavClick(item.href)}
-                    className="px-4 py-2 text-sm font-sans text-foreground-muted hover:text-foreground transition-colors duration-medium relative group"
-                  >
-                    {item.label}
-                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-px bg-primary group-hover:w-3/4 transition-all duration-medium" />
-                  </button>
-                )}
+                <button
+                  type="button"
+                  onClick={() => handleNavClick(item.href)}
+                  className="px-4 py-2 text-sm font-sans text-foreground-muted hover:text-foreground transition-colors duration-medium relative group"
+                >
+                  {item.label}
+                  {/* Анимированная полоска при наведении */}
+                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-px bg-primary group-hover:w-3/4 transition-all duration-medium" />
+                </button>
               </li>
             ))}
           </ul>
@@ -232,28 +227,18 @@ useEffect(() => {
         >
           <ul className="flex flex-col p-6 gap-2">
             {navItems.map((item, index) => (
-              <li 
+              <li
                 key={item.label}
                 className={`animate-fade-in-up`}
                 style={{ animationDelay: `${index * 0.05}s` }}
               >
-                {item.href.startsWith('/articles') ? (
-                  <Link
-                    to={item.href}
-                    onClick={() => setIsOpen(false)}
-                    className="block px-4 py-3 text-2xl font-serif text-foreground-muted hover:text-foreground hover:bg-accent/30 rounded-lg transition-all duration-medium"
-                  >
-                    {item.label}
-                  </Link>
-                ) : (
-                  <button
-                    type="button"
-                    onClick={() => handleNavClick(item.href)}
-                    className="block w-full text-left px-4 py-3 text-2xl font-serif text-foreground-muted hover:text-foreground hover:bg-accent/30 rounded-lg transition-all duration-medium"
-                  >
-                    {item.label}
-                  </button>
-                )}
+                <button
+                  type="button"
+                  onClick={() => handleNavClick(item.href)}
+                  className="block w-full text-left px-4 py-3 text-2xl font-serif text-foreground-muted hover:text-foreground hover:bg-accent/30 rounded-lg transition-all duration-medium"
+                >
+                  {item.label}
+                </button>
               </li>
             ))}
           </ul>

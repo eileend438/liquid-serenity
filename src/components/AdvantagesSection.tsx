@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 const advantages = [
   {
@@ -145,12 +146,12 @@ const AdvantagesSection = () => {
     которые делают бизнес устойчивым в реальности, а не в презентациях.
   </p>
 
-  <a
-    href="/articles"
+  <Link
+    to="/articles"
     className="btn-gold px-10 py-4 rounded-xl font-sans text-sm uppercase tracking-wider inline-flex"
   >
     Читать статьи
-  </a>
+  </Link>
 </div>
 
 
