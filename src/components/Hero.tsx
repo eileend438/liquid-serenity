@@ -17,19 +17,19 @@ const Hero = () => {
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           {/* Photo */}
           <div className="relative opacity-0 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
-              {/* Glowing ring */}
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/30 via-transparent to-primary/10 animate-glow-pulse" />
-              
+            <div className="relative w-72 h-[450px] md:w-80 md:h-[500px] lg:w-[400px] lg:h-[550px]">
+              {/* Glowing Frame (прямоугольный светящийся фон) */}
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/30 via-transparent to-primary/10 animate-glow-pulse" />
+
               {/* Photo container */}
-              <div className="absolute inset-2 rounded-full overflow-hidden glass-card p-1">
+              <div className="absolute inset-2 rounded-2xl overflow-hidden glass-card p-1">
                 <img
                   src={sabrinaPhoto}
                   alt="Сабрина Салихова"
-                  className="w-full h-full object-cover rounded-full"
+                  className="w-full h-full object-cover"
                 />
               </div>
-              
+
               {/* Decorative elements */}
               <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary/20 rounded-full blur-sm animate-float" style={{ animationDelay: '-2s' }} />
               <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-silver/20 rounded-full blur-sm animate-float" style={{ animationDelay: '-4s' }} />
@@ -57,9 +57,7 @@ const Hero = () => {
               style={{ animationDelay: '0.5s' }}
             >
               Помогаю создать внеконкурентный, прибыльный и уникальный продукт
-              <br />
               с высокоустойчивой бизнес-моделью,
-              <br />
               который отстраивает от конкурентов
 
             </p>
