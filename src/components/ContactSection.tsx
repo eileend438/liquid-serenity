@@ -40,6 +40,8 @@ const ContactSection = () => {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
+
+
           Контакты
         </h2>
 
@@ -56,6 +58,7 @@ const ContactSection = () => {
 
             <p className="text-foreground-muted text-lg mb-2">Telegram</p>
             <p className="font-serif text-2xl text-foreground mb-8">@Sabrina_Salihova</p>
+
 
             <a
               href="https://t.me/Sabrina_Salihova"
