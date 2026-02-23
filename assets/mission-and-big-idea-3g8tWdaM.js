@@ -1,4 +1,4 @@
-import{j as a,R as s}from"./index-BfbNfHyk.js";const t=`
+import{j as e,R as s,M as t,S as r}from"./index-lZ_QIcjH.js";const d=`
 **Почему бизнес без миссии обречён**
 
 Бизнес может расти годами — по выручке, по числу сотрудников, по географии. Но расти — не значит становиться устойчивым. Без осмысленной миссии компания неизбежно сталкивается с тремя системными проблемами.
@@ -19,7 +19,7 @@ import{j as a,R as s}from"./index-BfbNfHyk.js";const t=`
 
 Так появляются «качели»: доход то растёт, то падает; приоритеты постоянно меняются; команда теряет понимание направления.
 
-Миссия выполняет функцию стратегического фильтра. Любая инициатива оценивается через вопрос: усиливает ли она основную идею бизнеса? Если нет — её проще отклонить, даже если она обещает быструю прибыль.
+Миссия выполняет функцию стратегического фильтра. Любая инициатива оценивается через вопрос: усиливает ли она **основную идею бизнеса**? Если нет — её проще отклонить, даже если она обещает быструю прибыль.
 
 Это убирает метания и формирует устойчивую траекторию развития.
 
@@ -33,7 +33,7 @@ import{j as a,R as s}from"./index-BfbNfHyk.js";const t=`
 
 Big Idea позволяет выйти из прямого сравнения. Вместо борьбы за идентичные характеристики появляется собственная смысловая категория, где конкуренция становится вторичной.
 
-**Цель, стратегия, миссия и Big Idea: принципиальные различия**
+**Цель, стратегия, миссия и Big Idea (Большая идея): принципиальные различия**
 
 Эти понятия часто смешивают, хотя они относятся к разным уровням управления.
 
@@ -165,4 +165,6 @@ Big Idea — уникальная архитектура поверх него.
 
 Если ответ найден — каждый шаг становится частью осмысленной траектории.
 
-`,i=[a.jsx(s,{className:"text-foreground-muted text-lg leading-relaxed space-y-6",components:{hr:()=>a.jsx("div",{className:"gold-divider my-8"}),strong:({children:e})=>a.jsx("strong",{className:"font-black text-gold-gradient",children:e}),ul:({children:e})=>a.jsx("ul",{className:"list-disc pl-6 space-y-3 marker:text-[#D4A441]",children:e}),p:({children:e})=>a.jsx("p",{children:e})},children:t},"md")];export{i as default};
+Если у вас нет миссии и Big Idea, то для решения этой задачи оставьте заявку на диагностику.
+
+`,i=[e.jsx(s,{className:"text-foreground-muted text-lg leading-relaxed space-y-6",components:{hr:()=>e.jsx("div",{className:"gold-divider my-8"}),strong:({children:a})=>e.jsx("strong",{className:"font-black text-gold-gradient",children:a}),ul:({children:a})=>e.jsx("ul",{className:"list-disc pl-6 space-y-3 marker:text-[#D4A441]",children:a}),p:({children:a})=>e.jsx("p",{children:a})},children:d},"md"),e.jsxs("div",{className:"glass-card rounded-2xl p-8 md:p-12 text-center mb-8",children:[e.jsx("div",{className:"w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center",children:e.jsx(t,{className:"w-7 h-7 text-primary"})}),e.jsx("p",{className:"text-foreground-muted text-lg mb-2",children:"Telegram"}),e.jsx("p",{className:"font-serif text-2xl text-foreground mb-8",children:"@Sabrina_Salihova"}),e.jsxs("a",{href:"https://t.me/Sabrina_Salihova",target:"_blank",rel:"noopener noreferrer",className:"inline-flex items-center gap-3 btn-gold px-10 py-4 rounded-xl font-sans text-sm uppercase tracking-wider",children:[e.jsx(r,{size:18}),"Написать в Telegram"]})]})];export{i as default};
