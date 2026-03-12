@@ -63,18 +63,23 @@ const Hero = () => {
             </p>
 
             <p
-              className="text-foreground-muted/80 text-sm md:text-base leading-relaxed mb-8 opacity-0 animate-fade-in-up"
-              style={{ animationDelay: '0.55s' }}
-            >
-              Формирую комплексную конкурентоспособность: идеологическую, продуктовую, стратегическую, маркетинговую, финансовую, антикризисную.
-            </p>
+                          className="text-foreground-muted text-lg leading-relaxed mb-4 opacity-0 animate-fade-in-up"
+                          style={{ animationDelay: '0.5s' }}
+                        >
+                          Формирую КОМПЛЕКСНУЮ КОНКУРЕНТОСПОСОБНОСТЬ: идеологическую,
+                          смысловую, маркетинговую, продуктовую, стратегическую, финансовую, антикризисную.
+
+                        </p>
 
             <p
-              className="text-foreground-muted/80 text-sm md:text-base leading-relaxed mb-8 opacity-0 animate-fade-in-up"
-              style={{ animationDelay: '0.55s' }}
-            >
-              Моя миссия: развивать экономику России через создание вместе с предпринимателями высокоустойчивых, долгосрочно успешных бизнесов, которые формируют новые категории рынка и становятся драйверами роста экономики.
-            </p>
+                          className="text-foreground-muted text-lg leading-relaxed mb-4 opacity-0 animate-fade-in-up"
+                          style={{ animationDelay: '0.5s' }}
+                        >
+                          Моя миссия: развивать экономику России через создание вместе с предпринимателями высокоустойчивых,
+                          долгосрочно успешных бизнесов,
+                          которые формируют новые категории рынка и становятся драйверами роста экономики.
+
+                        </p>
 
             {/* CTAs */}
             <div 
