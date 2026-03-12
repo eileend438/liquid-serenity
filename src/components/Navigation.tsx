@@ -4,6 +4,7 @@ import { Music, Pause, Menu, X } from 'lucide-react';
 
 const navItems = [
   { label: 'Кто я', href: '/#about' },
+  { label: 'Услуги', href: '/#services' },
   { label: 'Опыт', href: '/#experience' },
   { label: 'Экспертное преимущество', href: '/#advantages' },
   { label: 'Проекты', href: '/projects' },
