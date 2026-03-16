@@ -1,4 +1,4 @@
-import{j as e,R as s,M as t,S as r}from"./index-CePIBQjL.js";const l=`
+import{j as e,R as s,M as t,S as r}from"./index-Di5oTDu1.js";const l=`
 Большинство предпринимателей считают, что судьба компании определяется продуктом, маркетингом или продажами.
 
 Но если посмотреть на сильные компании мира, становится очевидно другое.
