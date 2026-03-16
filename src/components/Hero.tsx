@@ -37,7 +37,7 @@ const Hero = () => {
           </div>
 
           {/* Content */}
-          <div className="flex-1 text-center lg:text-left max-w-2xl">
+          <div className="flex-1 text-left lg:text-left max-w-2xl">
             <h1 
               className="font-serif text-2xl md:text-4xl text-foreground mb-4 opacity-0 animate-fade-in-up"
               style={{ animationDelay: '0.3s' }}
@@ -49,9 +49,10 @@ const Hero = () => {
               className="text-xl md:text-3xl text-[#F2C94C] font-serif tracking-wide mb-6 opacity-0 animate-fade-in-up"
               style={{ animationDelay: '0.4s' }}
             >
-              СТРАТЕГ-ВИЗИОНЕР • БИЗНЕС-КОУЧ • МАРКЕТОЛОГ • ИССЛЕДОВАТЕЛЬ • СЕРИЙНЫЙ ПРЕДПРИНИМАТЕЛЬ
+              СТРАТЕГ ПО СОЗДАНИЮ ВНЕКОНКУРЕНТНЫХ БИЗНЕСОВ
             </p>
-            
+
+            <div className="space-y-6">
             <p 
               className="text-foreground-muted text-lg leading-relaxed mb-4 opacity-0 animate-fade-in-up"
               style={{ animationDelay: '0.5s' }}
@@ -66,7 +67,7 @@ const Hero = () => {
                           className="text-foreground-muted text-lg leading-relaxed mb-4 opacity-0 animate-fade-in-up"
                           style={{ animationDelay: '0.5s' }}
                         >
-                          Формирую КОМПЛЕКСНУЮ КОНКУРЕНТОСПОСОБНОСТЬ: идеологическую,
+                          Формирую <strong className="font-black text-gold-gradient">КОМПЛЕКСНУЮ КОНКУРЕНТОСПОСОБНОСТЬ:</strong> идеологическую,
                           смысловую, маркетинговую, продуктовую, стратегическую, финансовую, антикризисную.
 
                         </p>
@@ -75,11 +76,13 @@ const Hero = () => {
                           className="text-foreground-muted text-lg leading-relaxed mb-4 opacity-0 animate-fade-in-up"
                           style={{ animationDelay: '0.5s' }}
                         >
-                          Моя миссия: развивать экономику России через создание вместе с предпринимателями высокоустойчивых,
+                          МОЯ МИССИЯ: развивать экономику России через создание вместе с предпринимателями высокоустойчивых,
                           долгосрочно успешных бизнесов,
                           которые формируют новые категории рынка и становятся драйверами роста экономики.
 
                         </p>
+                        </div>
+
 
             {/* CTAs */}
             <div 
