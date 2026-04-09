@@ -68,43 +68,7 @@ const ContactSection = () => {
             </a>
           </div>
 
-          {/* Optional contact form */}
-          <div 
-            className={`glass-card rounded-2xl p-8 transition-all duration-slow delay-200 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}
-          >
-            <h3 className="font-serif text-xl text-foreground text-center mb-6">
-              Или оставьте сообщение
-            </h3>
 
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <input
-                  type="text"
-                  placeholder="Ваше имя"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-5 py-4 rounded-xl bg-accent/30 border border-border-glass/30 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 transition-colors duration-medium"
-                />
-              </div>
-              <div>
-                <textarea
-                  placeholder="Ваше сообщение"
-                  rows={4}
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-5 py-4 rounded-xl bg-accent/30 border border-border-glass/30 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 transition-colors duration-medium resize-none"
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full btn-glass py-4 rounded-xl font-sans text-sm uppercase tracking-wider"
-              >
-                Связаться через Telegram
-              </button>
-            </form>
-          </div>
         </div>
       </div>
     </section>

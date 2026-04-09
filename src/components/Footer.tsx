@@ -1,25 +1,35 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from "react-router-dom";
+
 
 const navItems = [
   { label: 'Кто я', href: '/#about' },
   { label: 'Опыт', href: '/#experience' },
-  { label: 'Экспертиза', href: '/#expertise' },
-  { label: 'Проекты', href: '/#projects' },
+  { label: 'Экспертное преимущество', href: '/#advantages' },
+  { label: 'Проекты', href: '/projects' },
   { label: 'Статьи', href: '/articles' },
   { label: 'Контакты', href: '/#contacts' },
 ];
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const handleNavClick = (href: string) => {
-    if (href.startsWith('/#')) {
+    if (!href.startsWith('/#')) return;
+
+    if (location.pathname !== "/") {
+      navigate(href); // например "/#about"
+      return;
+    }
+
+
       const elementId = href.substring(2);
       const element = document.getElementById(elementId);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
-    }
+
   };
 
   return (
@@ -28,7 +38,14 @@ const Footer = () => {
         <div className="flex flex-col items-center gap-8">
           {/* Logo */}
           <Link 
-            to="/" 
+            to="/"
+            onClick={(e) => {
+                          if (location.pathname === "/") {
+                            e.preventDefault(); // чтобы роутер не делал "пустую навигацию"
+                            window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+                            hasScrolledRef.current = false; // чтобы якоря потом снова работали
+                          }
+                      }}
             className="font-serif text-2xl text-foreground hover:text-primary transition-colors duration-medium"
           >
             Сабрина Салихова
@@ -37,7 +54,19 @@ const Footer = () => {
           {/* Navigation */}
           <nav className="flex flex-wrap justify-center gap-6 md:gap-8">
             {navItems.map((item) => (
-              item.href.startsWith('/articles') ? (
+              item.href.startsWith('/#') ? (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  onClick={(e) => {
+                          e.preventDefault();
+                          handleNavClick(item.href);
+                        }}
+                  className="text-sm text-foreground-muted hover:text-foreground transition-colors duration-medium"
+                >
+                  {item.label}
+                </a>
+              ) : (
                 <Link
                   key={item.label}
                   to={item.href}
@@ -45,18 +74,6 @@ const Footer = () => {
                 >
                   {item.label}
                 </Link>
-              ) : (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleNavClick(item.href);
-                  }}
-                  className="text-sm text-foreground-muted hover:text-foreground transition-colors duration-medium"
-                >
-                  {item.label}
-                </a>
               )
             ))}
           </nav>

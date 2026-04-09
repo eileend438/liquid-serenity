@@ -1,0 +1,220 @@
+/* TechnologicalTransitionTable.module.css */
+
+/* Общая обёртка статьи — НЕ белая, под твой ocean/glass */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-radius: 1.25rem;
+
+  /* стекло */
+  background: linear-gradient(
+    135deg,
+    hsla(225, 60%, 25%, 0.30) 0%,
+    hsla(225, 60%, 15%, 0.18) 100%
+  );
+  border: 1px solid hsla(225, 40%, 50%, 0.15);
+  box-shadow:
+    0 18px 60px hsla(223, 88%, 5%, 0.45),
+    inset 0 1px 0 hsla(0, 0%, 100%, 0.06);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+/* Заголовок/подзаголовок — под премиум */
+.title {
+  font-size: clamp(1.35rem, 2.6vw, 2.1rem);
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0.35rem;
+
+  color: hsl(0 0% 100% / 0.98);
+  letter-spacing: 0.02em;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  text-align: center;
+  margin-bottom: 1.25rem;
+
+  color: hsl(220 20% 80% / 0.85);
+}
+
+/* Обёртка таблицы: стеклянная карточка + скролл по X на мобиле */
+.tableWrapper {
+  border-radius: 1.25rem;
+  overflow: hidden;
+
+  background: linear-gradient(
+    135deg,
+    hsla(225, 60%, 22%, 0.40) 0%,
+    hsla(225, 60%, 14%, 0.22) 100%
+  );
+  border: 1px solid hsla(225, 40%, 50%, 0.18);
+  box-shadow:
+    0 14px 55px hsla(223, 88%, 5%, 0.38),
+    inset 0 1px 0 hsla(0, 0%, 100%, 0.06);
+
+  /* важно: таблица шире — пусть будет горизонтальный скролл */
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Красивый скролл внутри таблицы (webkit) */
+.tableWrapper::-webkit-scrollbar {
+  height: 8px;
+}
+.tableWrapper::-webkit-scrollbar-track {
+  background: hsla(225, 60%, 10%, 0.35);
+}
+.tableWrapper::-webkit-scrollbar-thumb {
+  background: hsla(43, 60%, 52%, 0.35);
+  border-radius: 999px;
+}
+.tableWrapper::-webkit-scrollbar-thumb:hover {
+  background: hsla(43, 70%, 60%, 0.45);
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+
+  /* чтобы липкий хедер не дергался в скролле */
+  min-width: 980px;
+}
+
+/* Липкий хедер: золото+стекло, не фиолетовый из прошлого */
+.headerRow {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  background:
+    linear-gradient(
+      135deg,
+      hsla(225, 60%, 18%, 0.92) 0%,
+      hsla(225, 60%, 12%, 0.90) 100%
+    );
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  color: hsl(0 0% 100% / 0.95);
+}
+
+/* Ячейки заголовка */
+.sphereHeader,
+.wave5Header,
+.wave6Header {
+  padding: 1rem 1rem;
+  border-bottom: 1px solid hsla(43, 60%, 52%, 0.22);
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+
+  /* лёгкий золотой акцент */
+  color: hsl(43 70% 70% / 0.95);
+}
+
+.sphereHeader {
+  min-width: 220px;
+  width: 24%;
+}
+
+.wave5Header,
+.wave6Header {
+  width: 38%;
+}
+
+/* Полосатость строк — под ocean, без белого */
+.table tbody tr {
+  transition: background-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.table tbody tr:nth-child(odd) {
+  background: hsla(225, 60%, 12%, 0.35);
+}
+
+.table tbody tr:nth-child(even) {
+  background: hsla(225, 60%, 16%, 0.30);
+}
+
+/* Hover — мягкое золото, без “детского фиолета” */
+.table tbody tr:hover {
+  background: hsla(43, 60%, 52%, 0.10);
+  box-shadow: inset 0 0 0 1px hsla(43, 70%, 60%, 0.18);
+}
+
+/* Левый столбец — “Сфера” чуть ярче и с разделителем */
+.sphereCell {
+  padding: 0.95rem 1rem;
+  font-weight: 600;
+  vertical-align: top;
+
+  color: hsl(0 0% 100% / 0.92);
+  border-right: 1px solid hsla(225, 40%, 50%, 0.18);
+  border-bottom: 1px solid hsla(225, 40%, 50%, 0.14);
+}
+
+/* Остальные ячейки */
+.wave5Cell,
+.wave6Cell {
+  padding: 0.95rem 1rem;
+  vertical-align: top;
+
+  color: hsl(220 20% 80% / 0.92);
+  border-bottom: 1px solid hsla(225, 40%, 50%, 0.14);
+}
+
+.wave5Cell {
+  border-right: 1px solid hsla(225, 40%, 50%, 0.14);
+}
+
+/* переносы текста */
+.sphereCell,
+.wave5Cell,
+.wave6Cell {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+/* Мобила: не ужимать до микрошрифта — лучше скролл */
+@media (max-width: 1024px) {
+  .container {
+    padding: 1rem;
+  }
+  .table {
+    font-size: 0.9rem;
+    min-width: 940px;
+  }
+  .sphereHeader,
+  .wave5Header,
+  .wave6Header {
+    padding: 0.85rem 0.85rem;
+  }
+  .sphereCell,
+  .wave5Cell,
+  .wave6Cell {
+    padding: 0.85rem 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0.85rem;
+    border-radius: 1rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .table {
+    font-size: 0.88rem;
+    min-width: 920px;
+  }
+}

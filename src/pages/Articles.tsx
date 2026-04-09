@@ -3,45 +3,8 @@ import { Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { ArrowRight } from 'lucide-react';
+import { articles } from '@/content/articles';
 
-const articles = [
-  {
-    slug: 'product-foundation',
-    title: 'Продукт как основа бизнеса',
-    description: 'Почему сильный продукт — это фундамент устойчивого бизнеса и как создать его с нуля.',
-    category: 'Стратегия',
-  },
-  {
-    slug: 'uniqueness-strategy',
-    title: 'Уникальность как стратегия',
-    description: 'Как найти свою уникальность и превратить её в конкурентное преимущество на рынке.',
-    category: 'Уникальность',
-  },
-  {
-    slug: 'big-idea',
-    title: 'BIG IDEA и опережение',
-    description: 'Что такое большая идея и как она помогает опережать рынок на годы вперёд.',
-    category: 'Продукт',
-  },
-  {
-    slug: 'marketing-2026',
-    title: 'Маркетинг 2026: новые правила',
-    description: 'Как изменились покупательские привычки и что это значит для вашего маркетинга.',
-    category: 'Маркетинг',
-  },
-  {
-    slug: 'second-order-thinking',
-    title: 'Мышление лидера 2-го порядка',
-    description: 'Управление мышлением и эмоциями для устойчивости в кризисах и роста дохода.',
-    category: 'Мышление',
-  },
-  {
-    slug: 'passionarity-economics',
-    title: 'Пассионарность и экономика',
-    description: 'Связь между пассионарностью личности и экономическими процессами в бизнесе.',
-    category: 'Исследование',
-  },
-];
 
 const Articles = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -70,7 +33,10 @@ const Articles = () => {
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
             >
-              Стратегия, уникальность, продукт, мышление
+              <span className="block">Стратегия</span>
+                <span className="block">Уникальность</span>
+                <span className="block">Продукт</span>
+                <span className="block">Мышление</span>
             </p>
             <div className="gold-divider w-32 mx-auto mt-8" />
           </div>
@@ -85,10 +51,15 @@ const Articles = () => {
                 }`}
                 style={{ transitionDelay: `${150 + index * 80}ms` }}
               >
-                {/* Category badge */}
-                <span className="inline-block text-xs font-medium uppercase tracking-wider text-primary mb-4">
-                  {article.category}
-                </span>
+
+              {article.readingTime && (
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-xs text-foreground-muted">
+                    {article.readingTime}
+                  </span>
+                </div>
+              )}
+
 
                 <h2 className="font-serif text-xl text-foreground mb-4 leading-tight">
                   {article.title}

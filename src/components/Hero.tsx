@@ -3,7 +3,7 @@ import sabrinaPhoto from '@/assets/sabrina-photo.jpg';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden water-texture">
+    <section className="relative min-h-screen pb-28 flex items-center justify-center overflow-hidden water-texture">
       {/* Background gradient layers */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background-deep to-background-abyss" />
       
@@ -37,24 +37,36 @@ const Hero = () => {
           {/* Content */}
           <div className="flex-1 text-center lg:text-left max-w-2xl">
             <h1 
-              className="font-serif text-display-lg md:text-display-xl text-foreground mb-4 opacity-0 animate-fade-in-up"
+              className="font-serif text-2xl md:text-4xl text-foreground mb-4 opacity-0 animate-fade-in-up"
               style={{ animationDelay: '0.3s' }}
             >
-              Сабрина Салихова
+              САБРИНА САЛИХОВА
             </h1>
             
             <p 
-              className="text-lg md:text-xl text-primary font-serif tracking-wide mb-6 opacity-0 animate-fade-in-up"
+              className="text-xl md:text-3xl text-[#F2C94C] font-serif tracking-wide mb-6 opacity-0 animate-fade-in-up"
               style={{ animationDelay: '0.4s' }}
             >
-              Стратег-визионер • бизнес-коуч • мета-психолог • серийный предприниматель
+              СТРАТЕГ-ВИЗИОНЕР • БИЗНЕС-КОУЧ • МАРКЕТОЛОГ • ИССЛЕДОВАТЕЛЬ • СЕРИЙНЫЙ ПРЕДПРИНИМАТЕЛЬ
             </p>
             
             <p 
-              className="text-foreground-muted text-lg leading-relaxed mb-10 opacity-0 animate-fade-in-up"
+              className="text-foreground-muted text-lg leading-relaxed mb-4 opacity-0 animate-fade-in-up"
               style={{ animationDelay: '0.5s' }}
             >
-              Помогаю предпринимателям находить уникальность и превращать её в внеконкурентный продукт и стратегию на годы.
+              Помогаю создать внеконкурентный уникальный продукт и проекты
+              <br />
+              на фундаменте большой бизнес-идеи
+              <br />со стратегией на годы.
+            </p>
+
+            <p
+              className="text-foreground-muted/80 text-sm md:text-base leading-relaxed mb-8 opacity-0 animate-fade-in-up"
+              style={{ animationDelay: '0.55s' }}
+            >
+              Для собственников бизнеса, которые упёрлись в потолок, устали от конкуренции
+              <br />и хотят понятную долговременную стратегию,
+              <br />а не хаотичные решения.
             </p>
 
             {/* CTAs */}
@@ -81,20 +93,30 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 opacity-0 animate-fade-in" style={{ animationDelay: '1s' }}>
+      <div
+        className="
+          absolute left-1/2 -translate-x-1/2
+          bottom-6 md:bottom-8 lg:bottom-10
+          z-20
+          opacity-0 animate-fade-in
+        "
+        style={{ animationDelay: "1s" }}
+      >
         <a
           href="#about"
           onClick={(e) => {
             e.preventDefault();
-            document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+            document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
           }}
           className="flex flex-col items-center text-foreground-muted hover:text-primary transition-colors duration-medium"
         >
-          <span className="text-xs uppercase tracking-widest mb-2 font-sans">Узнать больше</span>
+          <span className="text-xs uppercase tracking-widest mb-2 font-sans">
+            Узнать больше
+          </span>
           <ArrowDown size={20} className="animate-float" />
         </a>
       </div>
+
     </section>
   );
 };
